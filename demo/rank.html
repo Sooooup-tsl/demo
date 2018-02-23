@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>  
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	    <meta content="telephone=no" name="format-detection">
+	    <link href="css/common.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="css/main.css?v072800">
+	</head>
+	<body class="layout">
+		<div id="index" >
+			<div class="head">
+				<img src="images/top.png"/>
+			</div>
+			<div class="box">
+				<img src="images/box.png"/>
+				<div class="dynamic">
+					<div>已报名<br/>80</div>
+					<div>投票人次<br/>2563</div>
+					<div>访问量<br/>10000</div>
+				</div>
+			</div>
+			<!-- 排行榜 -->
+			<div class="rank">
+				<img src="images/rank.png">
+				<table  cellspacing="0" border-collapse: collapse>
+					<thead>
+						<th>名次</th>
+						<th>编号</th>
+						<th>宝贝名字</th>
+						<th>票数</th>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+				<div class="showmore"> + 显示更多</div>
+			</div>
+		</div>
+        <div id="common">
+            <div style="background:#E8F89D">
+            	<img src="images/green.png" style="width: 100%;">
+            </div>
+        	<div class="prize">
+        		<div class="prize-title">奖品设置</div>
+        		<div class="prize-content">
+        			<p>1.文字文字文字文字文字文字文字文字</p>
+        			<p>1.文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+        			<p>1.文字文字文字文字文字文字文字文字</p>
+        		</div>
+        	</div>
+        	<div class="rule">
+        		<div class="rule-title">活动规则</div>
+        		<div class="rule-content">
+        			<p>1.文字文字文字文字文字文字文字文字</p>
+        			<p>1.文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+        			<p>1.文字文字文字文字文字文字文字文字</p>
+        		</div>
+        	</div>
+        </div>
+		<!-- 底部分类 -->
+		<div class="footer">
+			<div class="footer-bar">
+				<div><a href="index.html"><img src="images/1.png"/></a></div>
+				<div><a href="rank.html"><img src="images/2.png"/></a></div>
+				<div><a href="join.html"><img src="images/3.png"/></a></div>
+				<div><img src="images/4.png" class="rule"/></div>
+			</div>
+		</div>
+
+		<!-- 浮层弹框显示 End-->
+		<div class="rule-fixed hide">
+			<img src="images/share.png" style="width:100%" onclick="$(this).parent().hide()"/>
+		</div>
+	</body>
+    <script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+	<script charset="utf-8" type="text/javascript">
+		$(function(){
+			//获取图片高度
+			var h=$(".box img").css("height");
+			$(".dynamic").css("line-height",parseInt(h)*0.22+"px");
+		    //提示转发信息
+	    	$(".rule").click(function(){
+	    		$(".rule-fixed").show();
+	    	});
+	    	// $(".showmore").on("click",function(){
+	    	// 	$.ajax({
+	     //            method: "GET",
+	     //            dataType:"json",
+	     //            data: {
+	     //                'num':10,
+      //           },
+      //           url: "",
+      //           success  : function(data) {  
+      //               $("tbody").html("");
+      //               if(!data){
+      //                   return;
+      //               }
+      //               for(i=0;i<data.length;i++){
+      //                   $("tbody").append("<tr><td>"+(i+1)+"</td><td>"+data[i].number+"</td><td>"+data[i].username+"</td><td>"+data[i].score+"</td></tr>");
+	     //                }
+	     //            }
+	     //        });
+	    	// })
+	    	$(".showmore").on("click",function(){
+
+		        var data = 1;
+		        for (var i = 1; i < 9; i++) {//每次加载时模拟随机加载图片
+		            data = i;
+		            var html = "";
+		            html = '<tr><td>'+data+'</td><td>004</td><td>李佳佳</td><td>4362</td></tr>';
+		            $("tbody").append(html);
+		        }
+	    	})		
+		});
+
+	</script>
+</html>

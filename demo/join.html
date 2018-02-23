@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>  
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	    <meta content="telephone=no" name="format-detection">
+	    <link href="css/common.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="css/main.css?v072800">
+		<link rel="stylesheet" href="css/ui-box.css?v072800">
+	</head>
+	<body class="layout">
+		<div id="index" >
+			<div class="head">
+				<img src="images/top.png"/>
+				<div class="apply">
+					<img src="images/join.png"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="ub ub-ac ub-pj">
+					<div class="ub ub-pc ub-f1 w0 ta-center">浏览人数<br/>80</div>
+					<div class="ub ub-pc ub-f1 w0 ta-center">参与人次<br/>2563</div>
+					<div class="ub ub-pc ub-f1 w0 ta-center">投票人数<br/>10000</div>
+				</div>
+			</div>
+			<!-- 报名处 -->
+			<div class="vote" id="vip">
+				<img src="images/vote.png">
+        		<div class="form">
+        			<div class="upload-pic">
+        				<label>上传照片</label>
+	        			<!-- <input name="button" type="button" id="btn1" onclick="myfile.click();" class="picture" />
+	        			<input type="text" id="input1" disabled="true">
+						<input type="file" id="myfile" onchange="input1.value=this.value" style="display:none"> -->
+
+						<img src="images/add.png" id="btn_upload"/>
+						<div id="comment-photo"></div>
+					</div>
+        			<label>参赛宣言</label><textarea  rows="5" cols="20" id="message"></textarea>
+        		</div>
+        		<div class="subdiv">
+        			<button class="submit">提交</button>
+        		</div>
+			</div>
+		</div>
+        <div id="common">
+            <div style="background:#E8F89D">
+            	<img src="images/green.png" style="width: 100%;">
+            </div>
+        	<div class="prize">
+        		<div class="prize-title">奖品设置</div>
+        		<div class="prize-content">
+        			<p>1.文字文字文字文字文字文字文字文字</p>
+        			<p>1.文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+        			<p>1.文字文字文字文字文字文字文字文字</p>
+        		</div>
+        	</div>
+        	<div class="rule">
+        		<div class="rule-title">活动规则</div>
+        		<div class="rule-content">
+        			<p>1.文字文字文字文字文字文字文字文字</p>
+        			<p>1.文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+        			<p>1.文字文字文字文字文字文字文字文字</p>
+        		</div>
+        	</div>
+        </div>
+		<!-- 底部分类 -->
+		<div class="footer">
+			<div class="footer-bar">
+				<div><a href="index.html"><img src="images/1.png"/></a></div>
+				<div><a href="rank.html"><img src="images/2.png"/></a></div>
+				<div><a href="join.html"><img src="images/3.png"/></a></div>
+				<div><img src="images/4.png" class="rule"/></div>
+			</div>
+		</div>
+
+		<!-- 浮层弹框显示 End-->
+		<div class="rule-fixed hide">
+			<img src="images/share.png" style="width:100%" onclick="$(this).parent().hide()"/>
+		</div>
+	</body>
+    <script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+	<script src="js/mobile-upload.js"></script>
+	<script charset="utf-8" type="text/javascript">
+		$(function(){
+			//获取图片高度
+			var h=$(".box img").css("height");
+			$(".dynamic").css("line-height",parseInt(h)*0.22+"px");
+		    //提示转发信息
+	    	$(".rule").click(function(){
+	    		$(".rule-fixed").show();
+	    	});
+	    	$("#join .submit").click(function(){
+	    		var tel =$("#tel").val();
+	    		if(!Util.isMobile(tel)){
+	    			return Util.info("请填写正确的手机号码");
+	    		}
+	    		$("#join").addClass("hide");
+	    		//非会员
+	    		if(1==0){
+	    			$("#novip").removeClass("hide");
+	    		}
+	    		//会员
+	    		else{
+	    			$("#vip").removeClass("hide");
+	    			$("#vip .submit").click(function(){
+			    		var name =$("#name").val();
+			    		var message =$("#message").val();
+			    		//var picture=$("#input1").val();
+			    		if(Util.isEmpty(name)){
+			    			return Util.info("请填写姓名");
+			    		}
+			    		if($("#comment-photo").children().hasClass("upload-div")){}
+		    			else{
+		    				return Util.info("请上传照片");
+		    			}
+			    		// if(Util.isEmpty(picture)){
+			    		// 	return Util.info("请上传照片");
+	    				// }
+			    		if(Util.isEmpty(message)){
+			    			return Util.info("请填写您的参赛宣言");
+	    				}
+	    				location.href="my.html"
+		    		})
+	    		}
+	    	})
+	    	$("#toupdate").click(function(){
+	    		Util.showmsg("重新上传照片后，原照片的所有信息及票数将被清空，确定重新上传吗？","","","confirm")
+	    	});
+		});
+	</script>
+	<script>
+	var upload = new Mobile_upload();
+	upload.init({target:$('#btn_upload'),callback:function(result,name,postName){
+		$('#comment-photo').append('<div class="upload-div"><img src="'+result+'" id="result"/><input type="hidden" name="'+postName+'"/><img src="images/close.png" class="close"></div>');
+		$("#btn_upload").css("opacity","0");
+	}});
+
+	$("#comment-photo").on("click",".upload-div .close",function(){
+		$(this).parent().remove();
+		$("#btn_upload").css("opacity","1");
+	})
+	</script>
+	<script src="http://192.168.18.105:8081/target/target-script-min.js#anonymous"></script>
+</html>

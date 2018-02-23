@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>选购与攻略</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/part.css">
+    <link rel="stylesheet" type="text/css" href="css/ui-bar.css">
+    <link rel="stylesheet" type="text/css" href="css/ui-box.css">
+</head>
+<body class="layout">
+    <div style="padding-bottom:100px" class="bg-white">
+        <img src="images/sendsample.png" style="width:100%">
+        <div class="price">
+            <div class="sendmoney">
+                <p>寄样金额</p>
+                <p class="c2">¥<span class="fs25 ffa" id="money">0</span></p>
+            </div>
+            <div class="postage">
+                <p>所需邮费</p>
+                <p class="c4">¥<span class="fs25 ffa">5</span></p>
+            </div>
+            <p class="opac07 fs12">（免费寄送6个布样）</p>
+        </div>
+        <div id="choosesample">
+            <div class="content-block-title">选择布料<span class="c2 fs12">（可多选）</span></div>
+            <div class="container sendsample">
+                <div class="bg-white samplelist bb1">
+                    <div class="sendimg">
+                        <img src="images/sample1.png">
+                    </div>
+                    <div class="sendtitle">
+                        <p>优质雪尼尔</p>
+                    </div>
+                    <div class="sendchoose">
+                    </div>
+                </div>
+                <div class="bg-white samplelist bb1">
+                    <div class="sendimg">
+                        <img src="images/sample2.png">
+                    </div>
+                    <div class="sendtitle">
+                        <p>顶级棉麻面料</p>
+                    </div>
+                    <div class="sendchoose">
+                    </div>
+                </div>
+                <div class="bg-white samplelist bb1">
+                    <div class="sendimg">
+                        <img src="images/sample2.png">
+                    </div>
+                    <div class="sendtitle">
+                        <p>顶级棉麻面料2</p>
+                    </div>
+                    <div class="sendchoose">
+                    </div>
+                </div>
+            </div>
+            <div class="content-block-title">选择窗纱<span class="c2 fs12">（可多选）</span></div>
+            <div class="container sendsample">
+                <div class="bg-white samplelist bb1">
+                    <div class="sendimg">
+                        <img src="images/sample1.png">
+                    </div>
+                    <div class="sendtitle">
+                        <p>高密度十字麻纱</p>
+                    </div>
+                    <div class="sendchoose">
+                    </div>
+                </div>
+                <div class="bg-white samplelist bb1">
+                    <div class="sendimg">
+                        <img src="images/sample2.png">
+                    </div>
+                    <div class="sendtitle">
+                        <p>顶级绣花纱</p>
+                    </div>
+                    <div class="sendchoose">
+                    </div>
+                </div>
+                <div class="bg-white samplelist bb1">
+                    <div class="sendimg">
+                        <img src="images/sample2.png">
+                    </div>
+                    <div class="sendtitle">
+                        <p>顶级绣花纱2</p>
+                    </div>
+                    <div class="sendchoose">
+                    </div>
+                </div>
+                <div class="bg-white samplelist bb1">
+                    <div class="sendimg">
+                        <img src="images/sample2.png">
+                    </div>
+                    <div class="sendtitle">
+                        <p>顶级绣花纱3</p>
+                    </div>
+                    <div class="sendchoose">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-block-title">寄样说明</div>
+        <div class="container sendrule">
+            <p class="lh24">文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+        </div>
+    </div>
+    <div class="fixed_buy" id="paymoney">
+        <p class="topay btn-report">申请寄样</p>
+        <p class="total"><img src="images/index/kefu.png" class="img-custom">在线咨询</p>
+    </div>
+</body>
+<script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript">
+$(function() {
+    var n = 0;
+    $("#choosesample .sendsample .sendchoose").click(function(){
+        $(this).toggleClass("obj")
+        n=$("#choosesample .sendchoose.obj").length;
+        if(n >= 6){
+            var money=(n-6)*5;
+            $("#money").text(money);
+        }
+
+    })
+    //传值 
+    var temp_txt = "";
+    $(".btn-report").click(function(){
+        temp_txt = "";
+        for(var i = 0; i < $("#choosesample .sendsample .sendchoose").length; i++){
+            if($("#choosesample .sendsample .sendchoose").eq(i).hasClass("obj")){
+                temp_txt = temp_txt + $("#choosesample .sendsample .sendchoose").siblings(".sendtitle").find("p").eq(i).text() + ",";
+            }
+        }
+        temp_txt = temp_txt.substring(0,temp_txt.length -1);
+        console.log(temp_txt);
+    })
+})
+</script>
+</html>

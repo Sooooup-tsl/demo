@@ -1,0 +1,203 @@
+@CHARSET "UTF-8";
+
+body {
+    color: #000000
+}
+/* 首页小字灰色 */
+.c1 {
+    color: #BDBDBD
+}
+
+
+
+.month-new {
+    color: #000;
+    padding: 20px;
+}
+
+.month-new h2 {
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.month-new p {
+    color: #333;
+    font-size: 12px
+}
+
+.month-new .seerule {
+    font-size: 15px;
+    background: #fff;
+    color: #e31246;
+    padding: 7px;
+    text-decoration: underline;
+}
+.now-good {
+    color: #fff;
+    padding: 15px 20px 15px 20px;
+    background:#11CFC5;
+}
+.now-good h2 {
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.now-good p {
+    font-size: 12px
+}
+
+.now-good .seerule {
+    font-size: 15px;
+    padding: 7px;
+    text-decoration: underline;
+}
+.container {
+    /*padding: 0 10px;*/
+}
+
+.group {
+    border-bottom: 1px solid #e4e4e4;
+    padding-bottom: 15px
+}
+
+.group .oneping {
+    font-size: 16px;
+    background: #28cdc3;
+    color: #fff;
+    padding: 9px 15px;
+}
+
+.group h2 {
+    padding: 10px 0 5px 0;
+    /*max-height: 15px;*/
+}
+
+.group p {
+    padding-top: 1px;
+}
+
+footer {
+    background: #191919;
+    color: #fff;
+}
+
+.foot-bar-scroll {
+    padding: 20px 4%;
+    width: 92%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+	color: rgba(255,255,255,0.8);
+}
+
+.foot-bar-div img {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    padding-bottom: 9px;
+}
+
+.foot-bar-div {
+    padding: 0 22px;
+}
+
+.line {
+    width: 90%;
+    margin: 0 auto;
+    height: 1px;
+    background: rgba(255,255,255,0.2);
+}
+
+.foot2 {
+    padding: 30px 0
+}
+
+.foot2 .foot-bar-div {
+    padding: 0 30px;
+}
+
+.copyright {
+    padding: 25px;
+    font-size: 11px;
+    line-height: 24px;
+    text-align: center;
+    color: rgba(255,255,255,0.5);
+}
+
+.copyright img {
+    padding: 30px 15% 10px 15%;
+    width: 70%;
+	box-sizing: content-box;
+}
+
+.seemore {
+    width: 60%;
+    color: #fff;
+    text-align: center;
+    margin: 15% auto;
+}
+.seemore span{
+    background: #000000;
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+.backtop {
+    position: fixed;
+    bottom: 80px;
+    right: 15px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+.backtop img {
+    width: 100%
+}
+.Fabric{
+    text-align: center;
+}
+.fabric-content{
+    width: 90%;
+margin: 0 auto;
+padding: 7% 0;
+}
+.Fabric h1{
+    font-weight: 700;
+    font-size: 17px
+}
+.Fabric h2{
+    font-weight: 700;
+    font-size: 15px
+}
+.Fabric h3{
+    font-weight: normal;
+    font-size: 12px
+}
+.Fabric img{
+    width: 50%;
+}
+.Fabric p{
+    color: rgba(0,0,0,0.7);
+    font-size: 13px;
+    line-height: 28px;
+}
+.bg6{
+    background: #f6f6f6
+}
+.rule{
+    box-sizing: content-box;
+}
+.aboutus img{
+    width: 30%
+}
+.aboutus p{
+    text-align: left;
+}
+.aboutus .Fabric img{
+    width: 50%
+}
+.aboutus .Fabric p{
+    text-align: center;
+}

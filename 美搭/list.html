@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>  
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	    <meta content="telephone=no" name="format-detection">
+		<link rel="stylesheet" href="css/ui-bar.css">
+	    <link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body class="layout" style="background: #EEEEEE">
+		<div class="">
+		    <header>
+		        <div class="header">
+		            <div class="timeup">距离结束<span class="">00</span><label>天</label><span class="">00</span><label>时</label><span class="">00</span><label>分</label><span class="">00</span><label>秒</label></div>
+		        </div>
+		    </header>
+		    <div class="content">
+		        <!-- 已选订单详情 Start-->
+				<div class="busi-desc bg-white mt-15">
+	                <img src="images/business/g1.png" class="img-logo">
+	                <div class="bd">
+	                    <h4>韩式进口浮雕绣花窗纱定制窗帘纱定制窗帘</h4>
+	                    <p class="totalnum">30人团</p>
+	                    <div class="tips fs12 c3">
+	                    	<span class="c4 fs18">¥599</span>&nbsp;&nbsp;<del>¥1200</del>
+	                    	<a href=""><button class="joingroup">参团</button></a>
+	                    </div>
+	                </div>
+				</div>
+		        <!-- 已选订单详情 Start-->
+				<div class="busi-desc bg-white mt-15">
+	                <img src="images/business/g1.png" class="img-logo">
+	                <div class="bd">
+	                    <h4>韩式进口浮雕绣花窗纱定制窗帘纱定制窗帘</h4>
+	                    <p class="totalnum">30人团</p>
+	                    <div class="tips fs12 c3">
+	                    	<span class="c4 fs18">¥599</span>&nbsp;&nbsp;<del>¥1200</del>
+	                    	<a href=""><button class="joingroup">参团</button></a>
+	                    </div>
+	                </div>
+				</div>
+			</div>
+		</div>
+	</body>
+    <script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+	<script charset="utf-8" type="text/javascript">
+		$(function() {
+		    var sys_second = (new Date('{$endtime}') - new Date('{$nowtime}')) / 1000;
+		    var timer = setInterval(function() {
+		        if (sys_second >= 1) {
+		            sys_second -= 1;
+		            var day = Math.floor((sys_second / 3600) / 24);
+		            var hour = Math.floor((sys_second / 3600) % 24);
+		            var minute = Math.floor((sys_second / 60) % 60);
+		            var second = Math.floor(sys_second % 60);
+		            var d = day < 10 ? "0" + day: day;
+		            var h = hour < 10 ? "0" + hour: hour;
+		            var m = minute < 10 ? "0" + minute: minute;
+		            var s = second < 10 ? "0" + second: second;
+		            var str = '<span>' + d + '</span> <label>天 </label><span>' + h + '</span> <label>:</label> <span>' + m + '</span> <label>: </label><span>' + s + '</span> <label></label>';
+		            $(".inline-block").html('距结束剩余：' + str); //计算小时
+		        } else {
+					$(".timeup").html('已结束');
+		        }
+		    },
+		    1000);
+	})
+	</script>
+</html>

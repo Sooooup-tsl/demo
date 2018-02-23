@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>选购与攻略</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/part.css">
+</head>
+<body class="layout">
+    <img src="images/purtopbar.png" style="width:100%">
+    <div class="mt-15">
+        <div class="bgw bt1">
+            <div class="bgd pullDown">
+                <div class="">颜色</div>
+            </div>
+            <div class="bg-white bb1 mb-15 hide">
+                <div class="richtext">
+                    <img src="images/1.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="bgw bt1">
+            <div class="bgd pullDown">
+                <div class="">面料</div>
+            </div>
+            <div class="bg-white bb1 mb-15 hide">
+                <div class="richtext">
+                    <img src="images/2.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="bgw bt1">
+            <div class="bgd pullDown">
+                <div class="">遮光</div>
+            </div>
+            <div class="bg-white bb1 mb-15 hide">
+                <div class="richtext">
+                    <img src="images/3.jpg">
+                </div>
+            </div>
+        </div> 
+        <div class="bgw bt1">
+            <div class="bgd pullDown">
+                <div class="">款式</div>
+            </div>
+            <div class="bg-white bb1 mb-15 hide">
+                <div class="richtext">
+                    <img src="images/4.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="bgw bt1">
+            <div class="bgd pullDown">
+                <div class="">高度</div>
+            </div>
+            <div class="bg-white mb-15 hide">
+                <div class="richtext">
+                    <img src="images/5.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript">
+    $(".pullDown").click(function(){
+        $(this).toggleClass("bgu bb1");
+        $(this).siblings().slideToggle("hide")
+        if($(this).hasClass("bgu")){
+            $("body").animate({
+                 scrollTop:$(this).offset().top
+            }, 800);
+        }
+    })
+</script>
+</html>

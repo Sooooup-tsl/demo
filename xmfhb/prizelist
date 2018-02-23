@@ -1,0 +1,32 @@
+[
+	{
+		"id":"1",
+		"nickname":"大米",
+		"money":"1.88",
+		"datatime":"2016-03-01"	
+	},
+	{
+		"id":"2",
+		"nickname":"毛驴",
+		"money":"2.88",
+		"datatime":"2016-03-01"	
+	},
+	{
+		"id":"3",
+		"nickname":"毛驴",
+		"money":"2.88",
+		"datatime":"2016-03-01"	
+	},
+	{
+		"id":"4",
+		"nickname":"毛驴",
+		"money":"2.88",
+		"datatime":"2016-03-01"	
+	},
+	{
+		"id":"5",
+		"nickname":"毛驴",
+		"money":"2.88",
+		"datatime":"2016-03-01"	
+	}
+]

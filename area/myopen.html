@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我要开团</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="css/sm.min.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/part.css">
+</head>
+<body class="layout bg-white design " >
+    <img src="images/destopbar.png" style="width:100%">
+    <div class="mt-15 ta-center ">
+        <div class="mt-15 fs16">
+            <p><label>行政区域：</label><input type="text" placeholder="请填写您所在的行政区域" id="city-picker"></p>
+            <p class="mt-15"><label>小区名称：</label><input type="text" placeholder="请填写您的小区名称"  id="house"></p>
+        </div>
+        <div class="submit">
+            <button class="btn">开团<i class="smtri"></i></button>
+        </div>
+    </div>
+</body>
+<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+<script type="text/javascript" src="//g.alicdn.com/msui/sm/0.6.1/js/sm-city-picker.min.js" charset="utf-8"></script>
+<script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+<script>
+  $("#city-picker").cityPicker({
+    toolbarTemplate: '<header class="bar bar-nav">\
+    <button class="button button-link pull-right close-picker">确定</button>\
+    <h1 class="title">选择收货地址</h1>\
+    </header>'
+  });
+</script>
+<script type="text/javascript">
+    $(".btn").click(function(){
+            var city=$("#city-picker").val();
+            var house=$("#house").val();
+            if (Util.isEmpty(city)) {
+                Util.info("请选择行政区域");
+                return;
+            }
+            if (Util.isEmpty(house)) {
+                Util.info("请输入小区名称");
+                return;
+            }
+            location.href="searchlist.html"
+        })
+</script>
+</html>

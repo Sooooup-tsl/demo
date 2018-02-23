@@ -1,0 +1,34 @@
+[
+	{
+		"id":"1",
+		"material":"皮质"
+	},
+	{
+		"id":"2",
+		"material":"童趣"
+	},
+	{
+		"id":"3",
+		"material":"条纹"
+	},
+	{
+		"id":"4",
+		"material":"花纹"
+	},
+	{
+		"id":"5",
+		"material":"单色"
+	},
+	{
+		"id":"6",
+		"material":"水晶"
+	},
+	{
+		"id":"7",
+		"material":"其他"
+	},
+	{
+		"id":"8",
+		"material":"夜晚"
+	}
+]

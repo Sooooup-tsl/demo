@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>我的地址</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta content="telephone=no" name="format-detection">
+        <link rel="stylesheet" href="css/sm.min.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/order.css">
+		<link rel="stylesheet" type="text/css" href="css/ui-bar.css">
+	</head>
+	<body class="layout">
+		<div class="page">
+		    <header class="bar-nav">
+		        <div class="header">
+		            <div class="status5 ">收货地址<div class="pull-right" id="manage"><span >管理</span></div>
+		        </div>
+		    </header>
+		    <div class="content">
+                <div class="form mt-15 bg-white">
+                    <div class="f_address">
+                        <div>
+                            <div>
+                                <p class="fleft">李倩</p>
+                                <p class="ta-right">11245468</p>
+                            </div>
+                            <div class="cityArea"><span class="c2">【默认】</span>江苏省苏州市工业园区金鸡湖大道1355号国际科技园2期A411</div>
+                        </div>
+                        <div class="img-delete hide"></div>
+                    </div>
+                </div>
+                <div class="form mt-15 bg-white">
+                    <div class="f_address">
+                        <div>
+                            <div>
+                                <p class="fleft">李倩</p>
+                                <p class="ta-right">11245468</p>
+                            </div>
+                            <div class="cityArea">江苏省苏州市工业园区金鸡湖大道1355号</div>
+                        </div>
+                        <div class="img-delete hide"></div>
+                    </div>
+                </div>
+				<a href="my_write.html"><div class="add_address bg-white mt-15"> + 点击新增收货地址</div></a>
+		    </div>
+		</div>
+	</body>
+    <script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+	<script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+    <script type="text/javascript">
+    $("#manage").click(function () {
+        $(this).html('<span id="setDefault">设为默认地址</span>|<span id="delete-all">全部删除</span>|<span id="cancel">取消</span>');
+        $(".img-delete").removeClass("hide");
+        $(".f_address").addClass("move");
+        //选择默认地址
+        $(".form").click(function(){
+            $(".form").removeClass("default")
+            $(this).addClass("default");
+            $(".cityArea span").remove()
+            $(this).find(".cityArea").prepend('<span class="c2">【默认】</span>')
+            $(document).on("click","#setDefault",function(){
+                var _default=$(".form").has("span").text()
+                console.log(_default)
+            })
+        })
+    })
+    $(document).on("click","#delete-all",function(){
+        Util.showmsg("确定全部删除么？",
+            function deleAll(){
+                $(".form").remove();
+            },
+        "","confirm")
+    })
+    
+    $(document).on("click","#cancel",function(){
+        $(".form").unbind();
+        $(".pull-right").html('<span>管理</span>');
+        $(".img-delete").addClass("hide");
+        $(".f_address").removeClass("move");
+        $(".form").removeClass("default");
+    })
+    $(document).on("click",".img-delete",function(){
+        var _this=$(this).parents(".form")
+        Util.showmsg("确定删除么？",
+        function delet(){
+            _this.remove();
+        }
+        ,"","confirm")
+    })
+    </script>
+</html>

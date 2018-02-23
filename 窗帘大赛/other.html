@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title>查看详情</title>  
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	    <meta content="telephone=no" name="format-detection">
+        <link rel="stylesheet" href="css/common.css" >
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/main.css">
+	</head>
+	<body class="layout">
+		<div id="index" >
+            <div class="head">
+                <img src="images/top.png"/>
+            </div>
+            <div class="box">
+                <div class="ub ub-ac ub-pj">
+                    <div class="ub ub-pc ub-f1 w0 ta-center">浏览人数<br/>80</div>
+                    <div class="ub ub-pc ub-f1 w0 ta-center">参与人次<br/>2563</div>
+                    <div class="ub ub-pc ub-f1 w0 ta-center">投票人数<br/>10000</div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="titlework">
+                    <div class="titlenum">◆<span>NO:023</span>◆</div>
+                </div>
+                <div class="content-bj">
+                    <div class="">
+                        <div class="person pdb">
+                            <div class="person-head">
+                                <img src="images/baby/1.jpg" class="img_logo">
+                                <div class="shadow-tip">
+                                    <span class="person-no">总票数:<label id="totalscore">90</label>票</span>
+                                    <span class="person-name">李佳佳</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ub ub-pc ub-ac">
+                        <div class="ub ub-pc ub-ac ub-f1 w0 zan">
+                            <img src="images/zan.png">
+                            <label class="sub1 hide"><img src="images/iconsub1.png"></label>
+                            <span>-20</span>
+                        </div>
+                        <div class="ub ub-pc ub-ac ub-f1 w0 cai">
+                            <img src="images/cai.png">
+                            <label class="add1 hide"><img src="images/iconadd1.png"></label>
+                            <span>+110</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="devil">
+                    <img src="images/bar.png">
+                </div>
+            </div>
+        </div>
+        <!-- 弧形条 -->
+        <div class="commonbar">
+            <img src="images/commonbar.png">
+        </div>
+        <!-- 底部规则 -->
+        <div id="common">
+            <div class="rule">
+                <div class="rule-title">
+                    <img src="images/icon-rule.png">
+                </div>
+                <div class="rule-content">
+                    <p>1、上传你家的窗帘，邀请好友吐槽，票选最丑的窗帘，美搭美家免费给您换一个。</p>
+                    <p>2、好友有“挺好哒”和“真丑呀”两个选择，票数排行有“真丑呀”减去“挺好哒”所得。</p>
+                    <p>3、每人投票后有一次修改的机会。</p>
+                    <p>4、记得拉拢好友，不要让他成为你的绊脚石哦！</p>
+                    <p>5、必须上传自家窗帘照片，如发现为网上图片，则取消资格；</p>
+                    <p>最终解释权归美搭美家所有。</p>
+                </div>
+            </div>
+        </div>
+        <!-- 底部按钮 -->
+        <div class="footer-bar">
+            <div class="ub ub-pj ">
+                <div class="ub ub-f1 w0 ub-ac ub-pc"><a href="index.html"><img src="images/1.png"/></a></div>
+                <div class="ub ub-f1 w0 ub-ac ub-pc"><a href="rank.html"><img src="images/2.png" class="op50"/></a></div>
+                <div class="ub ub-f1 w0 ub-ac ub-pc"><img src="images/3.png" class="rule op50"/></div>
+                <div class="ub ub-f1 w0 ub-ac ub-pc"><a href="join.html"><img src="images/4.png" class="op50"/></a></div>
+            </div>
+        </div>
+
+		<!-- 浮层弹框显示 End-->
+		<div class="rule-fixed hide">
+			<img src="images/share.png" style="width:100%" onclick="$(this).parent().hide()"/>
+		</div>
+	</body>
+    <script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+	<script charset="utf-8" type="text/javascript">
+        $(function () {
+            //获奖攻略
+            $(".rule").click(function(){
+                $(".rule-fixed").show();
+            });
+            // 赞踩
+            var zan=parseInt($(".zan span").text());
+            var cai=parseInt($(".cai span").text());
+            $(".zan").click(function () {
+                if(!$(".zan").hasClass("gray")){
+                    zan=zan-1
+                    $(".zan span").text(zan)
+                    $(".sub1").removeClass("hide")
+                    $(".sub1").css({
+                        "position": "absolute",
+                        "left": "20px",
+                        "top": "10px",
+                        "z-index": 9999,
+                        "width":"40px"
+                    });
+                    $(".sub1").animate({
+                        "opacity": "0",
+                        "top": "-20px"
+                    },1500)
+                }else{
+                    Util.info("您的机会用完啦")
+                }
+                $(this).addClass("gray")
+                $("#totalscore").text(zan+cai)
+            });
+            $(".cai").click(function () {
+                if(!$(".cai").hasClass("gray")){
+                    cai=cai+1
+                    $(".cai span").text("+"+cai)
+                    $(".add1").removeClass("hide")
+                    $(".add1").css({
+                        "position": "absolute",
+                        "left": "20px",
+                        "top": "10px",
+                        "z-index": 9999,
+                        "width":"40px"
+                    });
+                    $(".add1").animate({
+                        "opacity": "0",
+                        "top": "-20px"
+                    },1500)
+                }else{
+                    Util.info("您的机会用完啦")
+                }
+                $(this).addClass("gray")
+                $("#totalscore").text(zan+cai);
+            });
+        });
+	</script>
+</html>

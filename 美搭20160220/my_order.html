@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>我的订单</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta content="telephone=no" name="format-detection">
+        <link rel="stylesheet" href="css/sm.min.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/order.css">
+		<link rel="stylesheet" type="text/css" href="css/ui-bar.css">
+		<style type="text/css">
+			.card-content-inner span{display:inline-block;width:80px;text-align:center;line-height:30px;height:30px;border:1px solid #B2B2B2;border-radius:5px}
+			.card-content-inner .save{background: #282828;color:#fff}
+			.card-content-inner .pushorder{border:1px solid #e31246;color:#e31246}
+			.bar-nav2 .header{text-align:end;padding:5px 10px;background: #f6f6f6;color: #8A8A8A;}
+			.bar-nav2~.content {top: 1.6rem;}
+		</style>
+	</head>
+	<body class="layout">
+		<div class="page">
+		    <header class="bar-nav">
+		        <div class="header">
+		            <div class="status1 ">我的订单</div>
+		        </div>
+		    </header>
+		    <div class="content">
+		    	<div class="my_content">
+				    <div class="bar-nav2">
+				        <div class="header">
+				            <div class="fleft ">订单编号：13114413</div>
+				            <div class="fs12">共2件商品</div>
+				        </div>
+				    </div>
+			        <!-- 已选订单详情 Start-->
+					<div class="busi-desc bg-white bb1">
+		                <img src="images/img/g1.png" class="img-logo">
+		                <div class="bd">
+		                    <h4>新品窗帘新品窗帘新品窗帘新品窗帘</h4>
+		                    <p>尺寸：<label id="size">宽4米一副</label> 颜色：<label id="color">枚红色</label></p>
+		                    <div class="tips">
+                                <span class="fs12 c1">金额：</span>
+		                        <span class="c2o fs18">¥599</span>
+		                        <span class="fright c1">×1</span>
+		                    </div>
+		                </div>
+					</div>
+					<div class="bg-white ta-right bb1">
+					    <div class="card-content">
+					      	<div class="card-content-inner">合计：¥600</div>
+					    </div>
+					</div>
+					<div class="bg-white ta-right">
+					    <div class="card-content">
+					      	<div class="card-content-inner">
+					      		<a href="my_express.html"><span class="logistics">查看物流</span></a>
+					      		<span class="save">确认收货</span>
+					      	</div>
+					    </div>
+					</div>
+				</div>
+		    	<div class="my_content">
+				    <div class="bar-nav2">
+				        <div class="header">
+				            <div class="fleft ">订单编号：13114413</div>
+				            <div class="fs12">共2件商品</div>
+				        </div>
+				    </div>
+			        <!-- 已选订单详情 Start-->
+					<div class="busi-desc bg-white bb1">
+		                <img src="images/img/g1.png" class="img-logo">
+		                <div class="bd">
+		                    <h4>新品窗帘新品窗帘新品窗帘新品窗帘</h4>
+		                    <p>尺寸：<label id="size">宽4米一副</label> 颜色：<label id="color">枚红色</label></p>
+		                    <div class="tips">
+                                <span class="fs12 c1">金额：</span>
+		                        <span class="c2o fs18">¥599</span>
+		                        <span class="fright c1">×1</span>
+		                    </div>
+		                </div>
+					</div>
+					<div class="bg-white ta-right bb1">
+					    <div class="card-content">
+					      	<div class="card-content-inner">合计：¥600</div>
+					    </div>
+					</div>
+					<div class="bg-white ta-right">
+					    <div class="card-content">
+					      	<div class="card-content-inner">
+					      		<a href="my_express.html"><span class="logistics">查看物流</span></a>
+					      		<span class="pushorder">晒单</span>
+					      	</div>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<!-- 确认收货 Start-->
+			<div class="rules hide">
+				<div class="rule">
+					<div class="rule-img">
+						<img src="images/img/g1.png">
+					</div>
+					<div class="rule-title">
+						<p class="c2 fs20">已加入购物车</p>
+					</div>
+					<hr>
+					<div class="rule-content">
+						<p class="c2o">去结算</p>
+						<hr>
+						<p class="c4">继续逛逛</p>
+					</div>
+				</div>
+			</div>
+			<!-- 确认收货 End-->
+		</div>
+	</body>
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+	<script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+    <script charset="utf-8" type="text/javascript">
+		function GetCookie(Name) {
+		    var search = Name + "="
+		    var Cookie = document.cookie;
+		    if (Cookie.length <= 0) return "";// cookie 不存在,返回空值
+		    if (Cookie.indexOf(search) == -1) return "";// 'visited' 不存在,返回空值
+		    start = Cookie.indexOf(search) + search.length//"visited=yes"起始位置索引值
+		    end = Cookie.indexOf(";", start);//"visited=yes"终止位置索引值
+		    if (end == -1);//";"不存在
+		    end = Cookie.length;
+		    return unescape(Cookie.substring(start, end))
+		}
+		function SetCookie() {
+		    if (GetCookie('visited') == '') {
+		        document.cookie = "visited=yes"
+		    }
+		    else {
+		        $(".shou-fixed").hide();
+		    }
+		}
+		SetCookie()	
+	</script> 
+</html>

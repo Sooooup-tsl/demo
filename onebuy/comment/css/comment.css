@@ -1,0 +1,137 @@
+@CHARSET "UTF-8";
+*{padding: 0;margin: 0}
+body {
+	background-color: #fff;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	color: #545454;
+	position: relative;
+}
+#comment{
+	padding: 5%;
+    background: #fff
+}
+li{
+    list-style-type: none;
+}
+.comment_btn{
+border: 0;
+border-radius: 0;
+height: 40px;
+line-height: 1;
+vertical-align: middle;
+font-size: 14px;
+display: table-cell;
+border-right: 0;
+background-color: #10CEC4;
+color: #fff;
+width: 25%;
+}
+.comment_word{
+background-color: #F6F6F6;
+border: 0;
+border-radius: 0;
+height: 40px;
+vertical-align: middle;
+display: table-cell;
+width: 70%;
+padding-left: 5%;
+font-size: 16px;
+}
+.tab{
+	overflow: hidden;
+	    border: 1px solid #000;
+	    position: relative;
+        margin: 8% 0
+}
+.tab span {
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+}
+.tab span:after {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 1px;
+    top: 0;
+        right: 0;
+    background: #000;
+}
+.tab span:last-child:after {width: 0}
+.tab span.cur {
+    color: rgba(255,255,255,0.9);
+	background: #000
+}
+
+.com_info{
+    margin:10px 0;
+}
+.friend-item{
+	    padding: 5% 0;
+        width: 100%;
+}
+.friend-item div {
+    display: inline-block;
+}
+.friend-item tr:nth-child(1) td:nth-child(1){
+vertical-align: top;
+width: 60px;
+}
+.friend-item .com_name{
+    padding-bottom: 5px
+}
+.friend-item .headimg img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.friend-item div:nth-child(2) h3{padding-bottom: 7px}
+.friend-item .com_data{
+	   
+    color: #B9B7B7;width: 70px;
+text-align: right;
+}
+.loadmore p{
+    width: 100%;
+padding: 13px 0;
+border: 1px solid #000;
+color: #000;
+text-align: center;
+margin: 15% auto;
+}
+.custom_callback{
+    overflow: hidden;
+color: rgba(0,0,0,0.5);
+padding-bottom: 5%;
+}
+.line{
+    display: inline-block;
+width: 64px;
+float: left;
+text-align: center;
+color: rgba(0,0,0,0.2);
+}
+.custom_word{
+    display: inline-block;
+width: 75%;
+float: left;
+line-height: 24px;
+
+}
+.showpicture{
+    overflow: hidden;
+    padding-bottom: 5%
+}
+.onepicture{
+    float: left;
+width: 20%;
+margin-right: 5%;
+}
+.square{
+    width: 60px;
+height: 60px;
+overflow: hidden;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/ui-box.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div>
+		<div class="header">
+            <div class="tab ub ub-pj">
+                <span class="ub ub-pc ub-f1 w0 cur">限时抢购</span>
+                <span class="ub ub-pc ub-f1 w0">星周四</span>
+                <span class="ub ub-pc ub-f1 w0">0元购</span>
+            </div>
+		</div>
+		<div class="container">
+			<ul>
+				<li>
+					<div class="busi_content">
+						<div>
+							<div>
+								<img src="images/img.png">
+							</div>
+							<div class="busi_city">
+								<span>上海</span>
+							</div>
+							<div class="busi_name">
+								<h1>上海如家酒店</h1>
+								<p>自助早餐+超值舒适标间</p>
+							</div>
+						</div>
+						<div class="ub ub-pj busi_detail">
+							<div class="ub ub-ver">
+								<div class="busi_price">
+									<span>￥</span><span class="busi_marketpri">99</span>起<del>￥100</del>
+								</div>
+								<div class="ub">
+									<div class="busi_prog_all ub"><span></span></div>
+									<div class="ub ub-ae busi_percent">已抢99%</div>
+								</div>
+							</div>
+							<div class="ub ub-ae">
+								<button class="busi_btn btn_start">马上抢</button>
+							</div>
+						</div>
+					</div>
+					<div class="busi_content">
+						<div>
+							<div>
+								<img src="images/img.png">
+							</div>
+							<div class="busi_city">
+								<span>上海</span>
+							</div>
+							<div class="busi_name">
+								<h1>上海如家酒店</h1>
+								<p>自助早餐+超值舒适标间</p>
+							</div>
+						</div>
+						<div class="ub ub-pj busi_detail">
+							<div class="ub ub-ver">
+								<div class="busi_price">
+									<span>￥</span><span class="busi_marketpri">99</span>起<del>￥100</del>
+								</div>
+								<div class="ub">
+									<div class="ub">共100席</div>
+								</div>
+							</div>
+							<div class="ub ub-ae">
+								<div class="ub busi_concern">100人已关注</div>
+								<button class="busi_btn btn_remind">设置提醒</button>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var span = $('.header .tab span');
+        var ul = $('.container ul li');
+        span.on("click", function(e){
+            span.removeClass("cur");
+            var tab =$(this).index();
+            $(this).addClass('cur');
+            ul.addClass("hide");
+            ul.eq(tab).removeClass("hide");
+        });
+    });
+</script>
+</html>

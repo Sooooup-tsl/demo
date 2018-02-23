@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>我的搭配</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta content="telephone=no" name="format-detection">
+        <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.5.6/css/sm.min.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/order.css">
+		<link rel="stylesheet" type="text/css" href="css/ui-bar.css">
+		<style type="text/css">
+		.busi-desc{position:relative;min-height:0}
+		.busi-desc .bd{margin-left: 115px;}
+		.busi-desc .img-logo{width:90px;height:90px}
+		.tips div{margin-top: 20px;}
+		</style>
+	</head>
+	<body class="layout">
+		<div class="page">
+		    <header class="bar-nav">
+		        <div class="header">
+		            <div class="status3 ">我的搭配<div class="pull-right" id="manage"><span>管理</span></div>
+		        </div>
+		    </header>
+		    <div class="content">
+		        <!-- 已选订单详情 Start-->
+		        <div class="bg-white">
+					<div class="busi-desc mt-15">
+		                <img src="images/business/g1.png" class="img-logo">
+		                <div class="bd arrowr">
+		                    <h4>新品窗帘新品窗帘新品窗帘新品窗帘</h4>
+		                    <div class="tips">
+		                        <div class="fs14 c3">2012-11-12</div>
+		                    </div>
+		                </div>
+		                <div class="img-delete hide"></div>
+					</div>
+				</div>
+		        <!-- 已选订单详情 Start-->
+		        <div class="bg-white">
+					<div class="busi-desc mt-15">
+		                <img src="images/business/g1.png" class="img-logo">
+		                <div class="bd arrowr">
+		                    <h4>新品窗帘新品窗帘新品窗帘新品窗帘</h4>
+		                    <div class="tips">
+		                        <div class="fs14 c3">2012-11-12</div>
+		                    </div>
+		                </div>
+		                <div class="img-delete hide"></div>
+					</div>
+				</div>
+		    </div>
+		</div>
+	</body>
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+	<script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.5.6/js/sm.min.js' charset='utf-8'></script>
+	<script type="text/javascript">
+	$("#manage").click(function () {
+		$(this).html('<span id="delete-all">全部删除</span>|<span id="cancel">取消</span>');
+		$(".busi-desc").addClass("move");
+		$(".bd").removeClass("arrowr");
+		$(".img-delete").removeClass("hide")
+	})
+	$(document).on("click","#delete-all",function(){
+		Util.showmsg("确定全部删除么？",
+			function deleAll(){
+				$(".busi-desc").remove();
+			},
+		"","confirm")
+	})
+	
+	$(document).on("click","#cancel",function(){
+		$(".pull-right").html('<span>管理</span>');
+		$(".busi-desc").removeClass("move")
+		$(".bd").addClass("arrowr");
+		$(".img-delete").addClass("hide")
+	})
+	$(document).on("click",".img-delete",function(){
+		var _this=$(this).parents(".busi-desc")
+		Util.showmsg("确定删除这条么？",
+			function delet(){
+				_this.remove();
+			},
+		"","confirm")
+	})
+	
+	</script>
+</html>

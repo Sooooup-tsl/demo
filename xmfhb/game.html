@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>小美发红包</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta content="telephone=no" name="format-detection">
+        <link rel="stylesheet" type="text/css" href="css/common.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    <body class="layout">
+        <div class="icon_prize">
+            <a href="prizelist.html"><img src="images/icon_prize.png"></a>
+        </div>
+        <div class="pd20">
+            <div class="game_head">
+                <img src="images/bj.png">
+                <div class="game_container">
+                    <div class="gamestart running startrun" id="running"></div>
+                    <div class="game_word">
+                        <img src="images/icon_word1.png">
+                    </div>
+                </div>
+            </div>
+            <div class="rule">
+                <h2>活动规则：</h2>
+                <p>1、点击“你好美呀”即可随机抽取1.08元-88.88元多种金额红包，抽中的红包将直接存入您的微信钱包零钱中。</p>
+                <p>2、每名用户每天有3次抽奖机会，分享可增加1次抽奖机会。</p>
+                <p>3、活动时间为2016年2月25日-2016年3月10日。</p>
+            </div>
+            <div class="prizeword hide"></div>
+            <!-- 没中奖 -->
+            <!-- <div class="prizeword hide">
+                <h1><span>0.00</span>元</h1>
+                <p>人家小美不是故意的嘛</p>
+            </div> -->
+            <!-- 中奖了 -->
+            <!-- <div class="prizeword hide">
+                <h1><span>88.88</span>元</h1>
+                <p>么么哒，领个红包今年发大财！</p>
+                <div class="icon_fetch">
+                    <img src="images/icon_fetch.png">
+                </div>
+            </div> -->
+        </div>
+        <div class="pof">
+            <p>< 本活动最终解释权归苏州美搭软装科技有限公司所有 ></p>
+        </div>
+        <!-- 三次机会用完 -->
+        <div class="sharepage hide" onclick="$(this).addClass('hide')">
+            <img src="images/shareimg.png"><!-- 三次机会用完 -->
+            <!-- <img src="images/shareimg2.png"> --><!-- 四次机会都用完 -->
+        </div>
+    </body>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript" src="js/noclickdelay.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(document).on("click",".game_word,.gamestart",function(){
+            $(".rule").addClass("hide")
+            $(".prizeword").removeClass("hide");
+
+            if(!$(".gamestart").hasClass("startrun")){
+                console.log("开启动画")
+                $(".game_word img").attr('src','images/icon_word1.png');
+                $(".gamestart").addClass("startrun")
+            }else{
+                console.log("暂停动画")
+                $(".game_word img").attr('src','images/icon_again.png');
+                $(".gamestart").removeClass("startrun");
+                $.ajax({
+                    type:"get",
+                    dataType:"json",
+                    url:"getprize",
+                    success:function(data){
+                        var imgX=-parseInt(data.imgid-1)*257
+                        $(".running").css({
+                            "background-image":"url(images/gamestart.png)",
+                            "background-size":"cover"
+                        })
+                        document.getElementById("running").style.backgroundPosition=imgX+"px"+" 0px"
+                       if(data.imgid==1){//imgid=1中奖 ，imgid2和imgid3不中
+                        //中奖了
+                            $(".prizeword").html('<h1><span>'+data.money+'</span>元</h1><p>么么哒，领个红包今年发大财！</p><div class="icon_fetch"><img src="images/icon_fetch.png"></div>')
+                       }else{
+                        //没中奖
+                            var i=Math.floor(Math.random()*3);
+                            var word=""
+                            if(i==1){
+                                word="不走心的小美同学一定是来大姨妈了"
+                            }else if(i==2){
+                                word="哦~小美同学开了个小差~"
+                            }else{
+                                word="人家小美不是故意的嘛"
+                            }
+                            $(".prizeword").html('<h1><span>(⊙o⊙)…</span></h1><p>'+word+'</p>')
+                       }
+                    }
+                })
+            }
+        });
+    })
+</script>
+</html>

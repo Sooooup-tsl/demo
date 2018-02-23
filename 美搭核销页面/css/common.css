@@ -1,0 +1,161 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 0;
+	font-size: 1rem;
+	font-family: "微软雅黑";
+	background: #fff;
+	color: #282828;
+	width: 100%;
+	max-width: 640px;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+	position: relative;
+}
+
+.hide {
+	display: none;
+}
+
+img {
+	width: 100%
+}
+
+input {
+	-webkit-appearance: none;
+}
+
+.mt1 {
+	margin-top: 1rem
+}
+
+.mt2 {
+	margin-top: 2rem
+}
+
+a,a:visited {
+	text-decoration: none;
+	color: inherit;
+	display: inline;
+}
+
+h1,h2,h3 {
+	font-weight: normal;
+}
+
+.layout {
+	width: 100%;
+	max-width: 640px;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+	position: relative;
+	height: 100%;
+}
+
+.btn-fade {
+	background: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 115;
+	text-align: center;
+}
+
+.btn-box {
+	margin: 0 auto;
+	width: 90%;
+	background: white;
+	border-radius: 5px;
+	margin-top: 40%;
+}
+
+.btn-sure,.btn-cancel {
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	color: #E50642;
+	width: 41%;
+	border: 1px solid #E50642;
+	margin: 10px 5px;
+	border-radius: 5px;
+}
+
+.btn-sure {
+	background: #E50642;
+	color: #fff;
+}
+
+.btn-title {
+	padding: 17px 13px;
+	font-size: 1rem;
+	color: #333333;
+	line-height: 24px;
+}
+
+.zoom {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.9);
+	padding: 20px 0;
+	z-index: 23;
+	width: 100%;
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0
+	}
+
+	100% {
+		opacity: 1
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0
+	}
+
+	100% {
+		opacity: 1
+	}
+}
+
+.fadeIn {
+	-webkit-animation: fadeIn linear 500ms both;
+	animation: fadeIn linear 500ms both
+}
+
+@-webkit-keyframes fadeOut {
+	0% {
+		opacity: 1
+	}
+
+	100% {
+		opacity: 0
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1
+	}
+
+	100% {
+		opacity: 0
+	}
+}
+
+.fadeOut {
+	-webkit-animation: fadeOut linear 500ms both;
+	animation: fadeOut linear 500ms both
+}

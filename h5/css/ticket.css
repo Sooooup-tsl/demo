@@ -1,0 +1,126 @@
+* {
+	padding: 0;
+	margin: 0
+}
+
+img {
+	max-width: 100%;
+	display: block
+}
+a,a:link {
+	text-decoration: none;
+	color: inherit;
+}
+body {
+	color: #fff;
+	font-size: 14px;
+	line-height: 1.5;
+	max-width: 640px;
+	width: 100%;
+	padding: 0;
+	margin: 0 auto;
+	font-family: "Microsoft YaHei"
+}
+
+.hide {
+	display: none
+}
+
+html,body {
+	height: 100%
+}
+
+.page {
+	background: url(../images/P10/bj.png) no-repeat #28CEC4;
+	background-size: 100% 100%;
+	height: 100%;
+}
+
+.page_info {
+	padding: 10%;
+	text-align: center;
+	color: rgba(255,255,255,0.9);
+}
+
+.page_info .word h2 {
+	font-size: 16px
+}
+
+.page_info .word p {
+	font-size: 12px
+}
+
+.page_info .icos_logo {
+	position: relative;
+	width: 20%;
+	margin: 10% auto;
+}
+
+.page_info form {
+	margin: 10% 0;
+}
+
+.page_info input {
+	background: #FFFFFF;
+	height: 40px;
+	width: 90%;
+	border-radius: 0;
+	padding: 0 5%;
+	font-size: 14px;
+	border: 1px solid #FFFFFF;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	-webkit-appearance: none;
+}
+
+.page_info .btn {
+	border: 0;
+	width: 40%;
+	height: 40px;
+	font-size: 15px;
+	background: #E31246;
+	border-radius: 5px;
+	color: #fff;
+	line-height: 40px;
+	text-align: center;
+	margin: 10% auto;
+}
+
+.page_tick {
+	background: #28CEC4;
+	background-size: 100% 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.page_tick .word {
+	padding-top: 25%;
+}
+
+.page_tick .word h2 {
+	font-size: 20px;
+	color: #FFFC00;
+	padding: 5px 0
+}
+
+.page_tick .word p {
+	font-size: 16px
+}
+
+.page_tick .tick_img {
+	width: 100%;
+	padding-top: 5%;
+}
+
+.page_tick .btn {
+	border: 0;
+	width: 40%;
+	height: 40px;
+	font-size: 15px;
+	border-radius: 5px;
+	color: #fff;
+	border: 1px solid #fff;
+	line-height: 40px;
+	text-align: center;
+	margin: 10% auto;
+}

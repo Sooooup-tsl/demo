@@ -1,0 +1,47 @@
+<!doctype html>
+<html class="fsvs demo" lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>清洗</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+
+<link rel="stylesheet" href="css/style.css">
+
+<script type="text/javascript" src="js/jquery.min.js"></script>=
+<script type="text/javascript" src="js/jquery.swipe-events.js"></script>
+<script type="text/javascript" src="js/fsvs.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</head>
+<body>
+
+<div id="fsvs-body">
+	<div class="slide">
+		<img src="images/1.png"	/>
+	</div>
+		
+	<div class="slide">
+		<img src="images/2.png"	/>
+	</div>
+
+	<div class="slide">
+		<img src="images/3.png"	/>
+	</div>
+	
+</div>
+
+<div class="back">
+    <img src="images/back.png">
+</div>
+<div class="arrowup shake">
+    <img src="images/arrow.png">
+</div>
+</body>
+<script type="text/javascript">
+    $(document).on('touchstart','.back img',function () {
+         history.back()
+    })
+</script>
+</html>

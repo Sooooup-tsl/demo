@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>抱枕专场</title>
+    <meta charset="utf-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" type="text/css" href="css/part.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" href="css/ui-base.css">
+    <link rel="stylesheet" href="css/ui-box.css">
+</head>
+<body class="layout">
+    <img src="images/new/p6.jpg" style="width:100%">
+    <div class="goods">
+       <!-- <div class="good">
+           <div class="good-line bg-white">
+               <div>
+                   <img src="images/p2.png" class="img">
+                   <div class="shadow">
+                       <p>田园涤麻婴儿蓝系列靠垫</p>
+                   </div>
+               </div>
+               <div class="pdtb">
+                   <span class="c2 ulev18">¥25</span>
+                   <span class="purright"> 136人购买</span>
+               </div>
+           </div>
+       </div> -->
+   </div>
+</body>
+<script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+<script src="js/echo.min.js"></script>
+<script type="text/javascript">
+echo.init();
+$(function(){
+    //瀑布流显示
+    function loadMeinv() {
+        var data = 1;
+        for (var i = 1; i < 7; i++) {
+            data = i;
+            var html = "";
+            html = '<div class="good"><div class="good-line bg-white"><div><img  src="images/blank.gif" data-echo="images/bloster/p'+data+'.png" class="img"></div><div class="ub ub-ver"><div class="ub fs16 pdtb">田园涤麻婴儿蓝系列</div><div class="ub ub-pj ub-pc ub-ac"><div class="ub c2">¥<span class="fsa fs20">25</span></div><div class="ub c5">136人购买</div></div></div></div></div>';
+            $minUl = getMinUl();
+            $minUl.append(html);
+        }
+    }
+    loadMeinv();
+    //无限加载
+    $(window).on("scroll", function() {
+        $minUl = getMinUl();
+        if ($minUl.height() <= $(window).scrollTop() + $(window).height()) {
+            //当最短的ul的高度比窗口滚出去的高度+浏览器高度大时加载新图片
+            loadMeinv();//加载新图片
+        }
+    })
+    function getMinUl() {//每次获取最短的ul,将图片放到其后
+        var $arrUl = $(".goods");
+        var $minUl = $arrUl.eq(0);
+        $arrUl.each(function(index, elem) {
+            if ($(elem).height() < $minUl.height()) {
+                $minUl = $(elem);
+            }
+        });
+        return $minUl;
+    }
+})
+</script>
+</html>

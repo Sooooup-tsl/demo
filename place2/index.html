@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>美搭美家</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" href="css/ui-base.css">
+<link rel="stylesheet" href="css/ui-box.css">
+<link rel="stylesheet" href="css/ui-color.css">
+</head>
+<body class="layout bj">
+	<div class="page">
+		<div class="space">
+			<p>请选择您想搭配的空间</p>
+			<div class="">
+				<div class="room">
+					<img src="images/tip1.png" name="1">
+				</div>
+				<div class="room">
+					<img src="images/tip2.png" name="2">
+				</div>
+				<div class="room">
+					<img src="images/tip3.png" name="3">
+				</div>
+				<div class="room">
+					<img src="images/tip4.png" name="4">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript">
+	var space='' ;
+	$(".room img").click(function () {
+		space=$(this).attr("name");
+		location.href="room.html?space="+space;
+	})
+</script>
+</html>

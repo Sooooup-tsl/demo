@@ -1,0 +1,68 @@
+@CHARSET "UTF-8";
+*{padding: 0;margin: 0}
+body {
+	background-color: #fff;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	color: #545454;
+	position: relative;
+}
+#comment{
+	margin: 5%
+}
+.tab{
+	overflow: hidden;
+	    border: 1px solid #000;
+	    position: relative;
+}
+.tab span {
+    height: 35px;
+    font-size: 16px;
+    line-height: 33px;
+    text-align: center;
+}
+.tab span:after {
+    content: "";
+    position: absolute;
+    height: 35px;
+    width: 1px;
+    top: 0;
+        right: 0;
+    background: #000;
+}
+.tab span.cur {
+    color: rgba(255,255,255,0.7);
+	background: #000
+}
+
+
+.friend-item{
+	    padding: 5% 0;
+    border-bottom: 1px solid #eee;
+}
+.friend-item div {
+    display: inline-block;
+}
+
+.friend-item div:nth-child(1) {
+    width: 60px;
+    height: 60px;
+    vertical-align: bottom;
+}
+.friend-item div:nth-child(1) img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.friend-item div:nth-child(2) {
+    font-size: 14px;
+    margin-left:10px;
+    vertical-align: middle;
+}
+.friend-item div:nth-child(2) h3{padding-bottom: 7px}
+.friend-item div:nth-child(3) {
+	    float: right;
+    margin: 14px;
+    color: #B9B7B7
+}

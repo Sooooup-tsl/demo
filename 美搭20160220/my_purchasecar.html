@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>我的地址</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta content="telephone=no" name="format-detection">
+        <link rel="stylesheet" href="css/sm.min.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/order.css">
+		<link rel="stylesheet" type="text/css" href="css/ui-bar.css">
+        <style type="text/css">
+        .busi-desc{margin-left: 35px;}
+        </style>
+	</head>
+	<body class="layout">
+		<div class="page">
+		    <header class="bar-nav">
+		        <div class="header">
+		            <div class="status1 ">购物车<div class="pull-right" id="manage"><span >编辑</span></div></div>
+		        </div>
+		    </header>
+		    <div class="content">
+                <div class="form mt-15 bg-white">
+                    <div class="form-content">
+                        <div class="icon-c1"></div>
+                        <!-- 已选订单详情 Start-->
+                        <div class="busi-desc bg-white">
+                            <img src="images/img/g1.png" class="img-logo">
+                            <div class="bd">
+                                <h4>新品窗帘新品窗帘新品窗帘新品窗帘</h4>
+                                <p>尺码：<label id="size">宽4米 高2.6米一副</label> 颜色：<label id="color">米白色</label></p>
+                                <div class="tips">
+                                    <span class="fs12 c1">金额：</span>
+                                    <span class="c2o fs18">¥599</span>
+                                    <span class="fright c1">×1</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="img-delete hide"></div>
+                    </div>
+                </div>
+                <div class="form mt-15 bg-white">
+                    <div class="form-content">
+                        <div class="icon-c2"></div>
+                        <!-- 已选订单详情 Start-->
+                        <div class="busi-desc bg-white">
+                            <img src="images/img/g1.png" class="img-logo">
+                            <div class="bd">
+                                <h4>新品窗帘新品窗帘新品窗帘新品窗帘</h4>
+                                <p>尺码：<label id="size">宽4米 高2.6米一副</label> 颜色：<label id="color">米白色</label></p>
+                                <div class="tips">
+                                    <span class="fs12 c1">金额：</span>
+                                    <span class="c2o fs18">¥599</span>
+                                    <span class="fright c1">×1</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="img-delete hide"></div>
+                    </div>
+                </div>
+		    </div>
+            <a href="order.html"><div class="fixed_buy">
+                <div class="icon-all-c1"></div>
+                <p class="left_bar"><label>全选</label>合计：¥<span>2352</span></p>
+                <p class="right_bar">去支付</p>
+            </div></a>
+		</div>
+	</body>
+    <script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+	<script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+    <script type="text/javascript">
+    $("#manage").click(function () {
+        $(this).html('<span id="cancel">完成</span>');
+        $(".img-delete").removeClass("hide");
+        $(".form-content").addClass("move");
+        //选择默认地址
+        $(".form").click(function(){
+        })
+    })
+    
+    $(document).on("click","#cancel",function(){
+        $(".form").unbind();
+        $(".pull-right").html('<span>编辑</span>');
+        $(".img-delete").addClass("hide");
+        $(".form-content").removeClass("move");
+    })
+    $(document).on("click",".img-delete",function(){
+        var _this=$(this).parents(".form")
+        Util.showmsg("确定删除么？",
+        function delet(){
+            _this.remove();
+        }
+        ,"","confirm")
+    })
+    </script>
+</html>

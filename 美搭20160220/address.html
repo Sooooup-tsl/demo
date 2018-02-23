@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>支付订金</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+        <link rel="stylesheet" type="text/css" href="css/address.css">
+        <link rel="stylesheet" type="text/css" href="css/ui-bar.css">
+	</head>
+	<body class="layout">
+		<div>
+			<!-- 已选订单详情 Start-->
+			<div class="busi-desc bg-white">
+                <img src="images/img/g1.png" class="img-logo">
+                <div class="bd">
+                    <h4>新品窗帘新品窗帘新品窗帘新品窗帘</h4>
+                    <p>尺码：<label id="size">宽4米 高2.6米一副</label> 颜色：<label id="color">米白色</label></p>
+                    <div class="tips">
+                        <span class="c2o fs18">¥599</span>
+                        <span class="fright c1">×1</span>
+                    </div>
+                </div>
+			</div>
+            <div class="edit_address bg-white ">
+                <!-- 显示地址 Start-->
+                <div class="form mt-15" id="complete">
+                    <div class="f_address">
+                        <div>
+                            <i id="delete"></i><label>×</label>
+                            <div>
+                                <p class="fleft" id="form_name">李倩</p>
+                                <p class="ta-right" id="form_tel">11245468</p>
+                            </div>
+                            <div  id="form_area">江苏省苏州市工业园区金鸡湖大道1355号国际科技园2期A411</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 显示地址 End-->
+            </div>
+			<a href="my_address.html"><div class="add_address bg-white mt-15"> + 点击添加收货地址</div></a>
+			<!-- 已选订单详情 End-->
+            <a href="order.html"><div class="fixed_buy">
+                <p class="total" style="float:left">金额：¥<span>2352</span></p>
+                <p class="topay">去支付</p>
+            </div></a>
+		</div>
+	</body>
+    <script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript">
+    $("#delete").click(function (){
+        Util.showmsg("确定删除么？",function delet(){
+            $("#complete").remove()
+        },"","confirm")
+    })
+    </script>
+</html>

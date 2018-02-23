@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>我的地址</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta content="telephone=no" name="format-detection">
+        <link rel="stylesheet" href="css/sm.min.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+        <link rel="stylesheet" type="text/css" href="css/address.css">
+		<link rel="stylesheet" type="text/css" href="css/ui-bar.css">
+	</head>
+	<body class="layout">
+		<div class="page">
+		    <div class="content">      <!-- 已选订单详情 End-->
+                <div class="edit_address bg-white">
+                    <!-- 填写地址 Start-->
+                    <div class="form" id="uncomplete">
+                        <p><label>联系人：&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" id="name" placeholder="您的姓名"/>
+                        </p>
+                        <p><label>收货地址：</label>
+                            <input type="text" id="city-picker" placeholder="请选择省市区域" value=""/><span></span>
+                        </p>
+                        <p><label>门牌号：&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" id="address" placeholder="请输入门牌号等详细信息"/>
+                        </p>
+                        <p><label>手机号：&nbsp;&nbsp;&nbsp;</label>
+                            <input type="tel" id="tel" maxlength="11" placeholder="方便送货人员联系您的电话"/>
+                        </p><br/>
+                        <div class="foot_buy ta-center " id="submit">保存</div><br>
+                    </div>
+                    <!-- 填写地址 End-->
+                </div>
+            </div>   
+		</div>
+	</body>
+    
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+	<script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+    <script type="text/javascript" src="//g.alicdn.com/msui/sm/0.5.6/js/sm-city-picker.min.js" charset="utf-8"></script>
+    <script>
+      $("#city-picker").cityPicker({
+        toolbarTemplate: '<header class="bar bar-nav">\
+        <button class="button button-link pull-right close-picker">确定</button>\
+        <h1 class="title">选择收货地址</h1>\
+        </header>'
+      });
+    </script>
+    <script type="text/javascript">
+    //填完个人信息
+    $("#uncomplete #submit").click(function(){
+        var name=$("#name").val();
+        var txt_area=$("#city-picker").val();
+        var address=$("#address").val();
+        var tel=$("#tel").val();
+        if (Util.isEmpty(name)) {
+            Util.info("姓名不能为空");
+            return;
+        }
+        if (Util.isEmpty(txt_area)) {
+            Util.info("地区不能为空");
+            return;
+        }
+        if (Util.isEmpty(address)) {
+            Util.info("门牌号不能为空");
+            return;
+        }
+        if (Util.isEmpty(tel)) {
+            Util.info("手机号码不能为空");
+            return;
+        }
+        if (!Util.isMobile(tel)) {
+            Util.info("手机号码格式不正确");
+            return;
+        }
+        location.href="my_address.html"
+    })
+    </script>
+</html>

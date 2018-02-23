@@ -1,0 +1,291 @@
+
+.group_area .ubimg {
+    width: 100px;
+    padding-top: 40px;
+}
+
+.group_area .ubimg img {
+    border-radius: 50%;
+}
+
+.group_area h2 {
+    padding-bottom: 10px;
+    font-weight: 700;
+    font-size: 16px
+}
+
+.ui-list-info p {
+    color: #777;
+    font-size: 13px;
+}
+
+.group_area .oneping {
+    font-size: 14px;
+    margin-top: 15px;
+}
+.div_img {
+    width: 45%;
+    padding: 10px 20px 10px 0;
+    -webkit-box-sizing: content-box;
+}
+
+.ui-list>li {
+    margin-left: 7px;
+}
+
+.ui-list-info {
+    -webkit-box-pack: end;
+}
+
+/*地址*/
+.f_address {
+    padding: 0 5% 7px 5%;
+    position: relative;
+}
+.cityArea{
+   color:#9F9F9F
+}
+.form {
+    width: 100%;
+}
+
+.form p {
+    font-size: 15px;
+    line-height: 24px;
+    padding: 7px 0px;
+    margin: 0;
+}
+
+.f_address label{
+    right: 0;
+    z-index: 10;
+    top: 0;
+    line-height: 18px;
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+}
+.f_address i {
+    position: absolute;
+    border-top: 30px solid #28cdc3;
+    border-left: 30px solid rgba(173, 10, 10, 0);
+    right: 0;
+    z-index: 10;
+}
+
+.add_address {
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    color: #28cdc3;
+}
+
+.icon-delete {
+    background: url(../images/icon/delete.png) no-repeat;
+    background-size: 21px;
+    background-position: 100%;
+    height: 20px;
+    position: absolute;
+    width: 20px;
+    right: 0;
+    top: 37%;
+}
+.img-delete{
+    background: url(../images/icon/delete.png) no-repeat;
+    background-size: 100%;
+    background-position: 100%;
+    height: 35px;
+    position: absolute;
+    width: 35px;
+    right: -30px;
+    top: 55px;
+}
+.fixed_buy {
+    background: #28cdc3;
+    line-height: 55px;
+    color: #fff;
+    border-radius: 0;
+    width: 100%;
+    max-width: 640px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    height: 55px;
+    z-index: 100;
+}
+
+.fixed_buy .total.fault-total {
+    background: #FFFFFF;
+    color: #28cdc3;
+    width: 50%;
+}
+
+.fixed_buy .topay.fault-topay {
+    width: 50%;
+}
+
+.fixed_buy .total {
+    width: 35%;
+    display: inline-block;
+    margin: 0;
+    padding: 0px;
+    text-align: center;
+    background: #191919;
+    color: white;
+    float: right;
+}
+/*.smtri{
+    border-left: 5px solid #fff;
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+    position: absolute;
+    margin-top: 23px;
+    margin-left: 6px;
+}*/
+.fixed_buy .total span {
+    font-size: 18px;
+    font-family: "Arial";
+}
+
+.fixed_buy  .img-custom {
+    width: 38px;
+    vertical-align: middle;
+}
+
+.fixed_buy .topay {
+    width: 65%;
+    display: inline-block;
+    margin: 0;
+    padding: 0px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px
+}
+
+.fixed_img {
+    position: fixed;
+    bottom: 0;
+}
+
+.fixed_img img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.busi-desc {
+    position: relative;
+    /*min-height: 140px;*/
+}
+/*.busi-desc:nth-child(2) .img-logo{
+    top:10px;
+
+}*/
+.busi-title h1{
+    padding: 15px;
+    text-align: center;
+    color: #9E9E9E;
+    font-size: 16px;
+}
+.busi-desc .img-logo {
+width: 110px;
+height: 110px;
+position: absolute;
+top: 15px;
+left: 10px;
+border: 1px solid #EDEDED;
+}
+
+.busi-desc .bd {
+    line-height: 1.5;
+    font-size: 16px;
+    padding: 15px 10px 15px 0;
+    margin-left: 135px;
+}
+
+.busi-desc .bd h4 {
+    font-size: 16px;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    -webkit-box-flex: 1;
+    height: inherit;
+}
+
+.bd * {
+    margin: 0
+}
+
+.busi-desc .bd .tips {
+    position: relative;
+}
+
+.busi-desc .bd p {
+font-size: 12px;
+color: #ACACAC;
+min-height: 60px;
+padding-top: 7px
+}
+
+.busi-desc .bd p span {
+    float: right;
+    padding-right: 16px;
+}
+.rules {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    max-width: 640px;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    z-index: 999;
+}
+
+.rule {
+    text-align: center;
+    max-width: 448px;
+    margin: 100px 10%;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+        font-size: 18px;
+}
+.rule-img{
+        margin: auto;
+}
+.rule-img img{
+        border-radius: 50%;
+    margin-top: -50px;
+    border: 5px solid #fff;
+    width: 100px;
+    height: 100px;
+}
+.rule-title{
+    padding: 10%
+}
+
+.rule-content {
+    padding: 0 10% 
+}
+
+.rule-content p {
+    padding: 5%
+}
+
+.rule button {
+    background-color: #28cdc3;
+    width: 90%;
+    max-width: 384px;
+    height: 37px;
+    border-radius: 0;
+    color: #FFFFFF;
+    bottom: 20px;
+    position: absolute;
+    border: 1px solid #28cdc3;
+    text-align: center;
+    font-size: 16px;
+    margin-left: 0;
+}

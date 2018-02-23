@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title>我的窗帘</title>  
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	    <meta content="telephone=no" name="format-detection">
+        <link rel="stylesheet" href="css/common.css" >
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/main.css">
+	</head>
+	<body class="layout">
+		<div id="index" >
+            <div class="head">
+                <img src="images/top.png"/>
+            </div>
+            <div class="box">
+                <div class="ub ub-ac ub-pj">
+                    <div class="ub ub-pc ub-f1 w0 ta-center">浏览人数<br/>80</div>
+                    <div class="ub ub-pc ub-f1 w0 ta-center">参与人次<br/>2563</div>
+                    <div class="ub ub-pc ub-f1 w0 ta-center">投票人数<br/>10000</div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="titlework">
+                    <div class="titlenum">◆<span>NO:023</span>◆</div>
+                </div>
+                <div class="content-bj">
+                    <div class="">
+                        <div class="person pdb">
+                            <div class="person-head">
+                                <img src="images/baby/1.jpg" class="img_logo">
+                                <div class="shadow-tip">
+                                    <span class="person-no">总票数:90票</span>
+                                    <span class="person-name">李佳佳</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="winword">
+                            <p>亲，我只想说一句，</p>
+                            <p>你家的窗帘丑出了新的境界！</p>
+                            <p>告诉我你的联系方式，让小美来拯救你。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+        <!-- 弧形条 -->
+        <div class="commonbar">
+            <img src="images/commonbar.png">
+        </div>
+		<div class="information">
+			<div class="content-bj">
+                <p><label>姓名：</label><input type="text" id="name"></p>
+                <p><label>电话：</label><input type="num" maxlength="11" id="tel"></p>
+                <div class="submit">
+                    <img src="images/submit.png">
+                </div>
+            </div>
+		</div>
+        <!-- 弧形条 -->
+        <div class="commonbar">
+            <img src="images/commonbar.png">
+        </div>
+        <!-- 底部规则 -->
+        <div id="common">
+            <div class="rule">
+                <div class="rule-title">
+                    <img src="images/icon-rule.png">
+                </div>
+                <div class="rule-content">
+                    <p>1、上传你家的窗帘，邀请好友吐槽，票选最丑的窗帘，美搭美家免费给您换一个。</p>
+                    <p>2、好友有“挺好哒”和“真丑呀”两个选择，票数排行有“真丑呀”减去“挺好哒”所得。</p>
+                    <p>3、每人投票后有一次修改的机会。</p>
+                    <p>4、记得拉拢好友，不要让他成为你的绊脚石哦！</p>
+                    <p>5、必须上传自家窗帘照片，如发现为网上图片，则取消资格；</p>
+                    <p>最终解释权归美搭美家所有。</p>
+                </div>
+            </div>
+        </div>
+        <!-- 底部按钮 -->
+        <div class="footer-bar">
+            <div class="ub ub-pj ">
+                <div class="ub ub-f1 w0 ub-ac ub-pc"><a href="index.html"><img src="images/1.png" class="op50"/></a></div>
+                <div class="ub ub-f1 w0 ub-ac ub-pc"><a href="rank.html"><img src="images/2.png" class="op50"/></a></div>
+                <div class="ub ub-f1 w0 ub-ac ub-pc"><img src="images/3.png" class="rule op50"/></div>
+                <div class="ub ub-f1 w0 ub-ac ub-pc"><a href="join.html"><img src="images/4.png"/></a></div>
+            </div>
+        </div>
+
+        <!-- 浮层弹框显示 End-->
+        <div class="rule-fixed hide">
+            <img src="images/share.png" style="width:100%" onclick="$(this).parent().hide()"/>
+        </div>
+	</body>
+    <script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+	<script charset="utf-8" type="text/javascript">
+    $(function(){
+        //获奖攻略
+        $(".rule").click(function(){
+            $(".rule-fixed").show();
+        });
+        $(".submit").click(function() {
+            var name=$("#name").val();
+            var tel=$("#tel").val();
+            if (Util.isEmpty(name)) {
+                Util.info("请输入姓名");
+                return;
+            }
+            if (Util.isEmpty(tel)) {
+                Util.info("请输入手机号");
+                return;
+            }
+            if (!Util.isMobile(tel)) {
+                    Util.info("手机号格式不正确");
+                    return;
+            }
+            Util.info("提交成功")
+        });
+        $("input").focus(function(){
+            $('html,body').animate({
+                scrollTop:$(this).offset().top
+            }, 800);
+        });
+    })
+	</script>
+</html>

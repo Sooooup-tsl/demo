@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>拼团成团</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta content="telephone=no" name="format-detection">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/newindex.css">
+	</head>
+	<body class="layout">
+    	<img src="images/purtopbar.png" style="width:100%;vertical-align: bottom;" id="topimg">
+		<div class="item-left">
+			<ul>
+				<li class="obj">颜色</li>
+				<li>面料</li>
+				<li>遮光</li>
+				<li>测量</li>
+				<li>安装</li>
+			</ul>
+		</div>
+		<div class="item-right">
+            <div class="richtext">
+                <img src="images/1.jpg">
+            </div>
+            <div class="richtext hide">
+                <img src="images/2.jpg">
+            </div>
+            <div class="richtext hide">
+                <img src="images/3.jpg">
+            </div>
+            <div class="richtext hide">
+                <img src="images/4.jpg">
+            </div>
+            <div class="richtext hide">
+                <img src="images/5.jpg">
+            </div>
+		</div>
+	</body>
+	<script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+
+    <script charset="utf-8" type="text/javascript">
+$(function(){
+	var img_h=parseInt($("#topimg").css("height"));
+	var win_h=$(window).height();
+	//tab切换
+	var ul = $('.item-left ul li');
+	var div = $('.item-right div');
+    $("ul li").click(function(e) {
+    	ul.removeClass("obj")
+    	$(this).addClass("obj");
+		var tab =$(this).index();
+		div.addClass("hide");
+		div.eq(tab).removeClass("hide");
+		//e.preventDefault();
+
+		var richtext_h=parseInt(div.eq(tab).find("img").height());
+		console.log(richtext_h)
+		if(win_h-img_h<richtext_h){
+			richtext_h=richtext_h;
+		}else{
+			richtext_h=win_h-img_h-20
+		}
+		$(".richtext").css("height",richtext_h)
+		console.log(richtext_h)
+    })
+})
+	</script> 
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>拼团成团</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta content="telephone=no" name="format-detection">
+    </head>
+    <body class="layout">
+        <input type="file"  id="picFile" onchange="readFile(this)" />   
+        <span>啵啵啵啵啵啵</span>
+    </body>
+    <script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+    <script src="js/noclickdelay.js"></script>
+    <script charset="utf-8" type="text/javascript">
+        function readFile(obj){ 
+                var file = obj.files[0];    
+                //判断类型是不是图片
+                if(!/image\/\w+/.test(file.type)){   
+                        alert("请确保文件为图像类型"); 
+                        return false; 
+                } 
+                var reader = new FileReader(); 
+                reader.readAsDataURL(file); 
+                reader.onload = function(e){ 
+                        alert(this.result); //就是base64
+         
+                } 
+        } 
+/**
+ * [以iPhone6的设计稿为例js动态设置文档 rem 值]
+ * @param  {[type]} doc [文档元素]
+ * @param  {[type]} win [window]
+ * @return {[type]}     [description]
+ */
+(function(doc, win) {
+    var docEl = doc.documentElement;
+    var resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+    var remcalc = function() {
+        var currClientWidth = docEl.clientWidth;
+        var fontValue;
+        if (!currClientWidth) return;
+        fontValue = ((62.5 * currClientWidth) / 375).toFixed(2);
+        fontValue = fontValue > 106.67 ? 106.67 : fontValue;
+        window.baseFontSize = fontValue;
+        docEl.style.fontSize = baseFontSize + 'px';
+    };
+    if (!docEl.addEventListener) return;
+    win.addEventListener(resizeEvent, remcalc, false);
+    doc.addEventListener('DOMContentLoaded', remcalc, false);
+})(document, window);
+    </script> 
+</html>

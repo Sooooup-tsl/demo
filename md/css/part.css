@@ -1,0 +1,257 @@
+.richtext {
+    width: 90%;
+    margin: 0 auto;
+    padding: .4rem 0;
+}
+
+.richtext img {
+    width: 100%
+}
+
+.richtext p {
+    padding: 0;
+    margin: 0;
+    line-height: 24px
+}
+
+.bgd {
+    background: url(../images/arrowdown.png) no-repeat #fff;
+    background-size: 16px;
+    background-position: 98%;
+    padding: 13px 5%;
+}
+
+.bgu {
+    background: url(../images/arrowup.png) no-repeat #fff;
+    background-size: 16px;
+    background-position: 98%;
+    padding: 13px 5%;
+}
+
+.good {
+    width: 50%;
+    float: left;
+}
+
+.good-line {
+    padding: 8px;
+    margin: 1em 0 0 0.5em;
+}
+
+.good img {
+    vertical-align: bottom;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAAWCAYAAAB5VTpOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjZEQkQ3NDZFOEYxNzExRTQ5NUZCRjQzMkM2RTA1RTJEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjZEQkQ3NDZGOEYxNzExRTQ5NUZCRjQzMkM2RTA1RTJEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NkRCRDc0NkM4RjE3MTFFNDk1RkJGNDMyQzZFMDVFMkQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NkRCRDc0NkQ4RjE3MTFFNDk1RkJGNDMyQzZFMDVFMkQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5hmE5XAAACP0lEQVR42uxYy3HCMBA1DPe4g5AKYiqwUwF0YHPiSirAVAA5copLIBUgOnAJTgemAkeaeZq8ESvGgJPh4J3ZsbQyq9XT/sygaZqgp18a9ID0gPSA3AXIYrGww63mUnNxh36leQk9hjLNkeZc85jkbfQUd9pyRrvd7kw2uvC+Mby+YZ+ExjHmIeZj6DUgrTTPWx4yBih/ThIgY3CIpz1gjRuVYuyNDM6dtYyA5XeM7k+s7R8lZCRAMtyeoVfNKcZHAued3P1wwUMaeIMEVgYde8crtx5bM0d3gN8vuwRkKMiM0QMAsMZ4LRiiBDfOAUJDnnSg+Qrub+cbPO1BQ6xXpN/uIcmi//CQeygnL1A4RObc8tbJKZWgp3DAXmGeO3sljw4I54kYB+aDmfB4otAy3vPiAeVhcggn11toixv+QsKshNCypffoASPy2JN0YN/NgDxT4rwmVhN4QSFUnJLcPUZ1kmgjyFJK8AEl+k5p6JHPKJEFFPNt6Yjsb281p1Jr1qaaPwTPqbE+QTK3HFCCtzy/orHrBJDvGzdcAoSEwiWn8hpSaFkQIvKgpOW+hVByXVmIfRMnHPe+kBt6YjWlDjIC820enNLK4cJl1/YxOSqMgv4TZBEl2S4odQCJ4I2Zc9lTX4UaeZA/Ua9hjebk52vMFOUF23QpPAsqwxG61Bnt1QVNnM8NBVnllGvl+xSQAKmpu7SeUZPHrHHAiuaVUHaZKuoq7SdA6fQtXVDZUqb6z//+/5AekB6Qv6AfAQYAZXq9jhikZ9kAAAAASUVORK5CYII=') no-repeat center #ccc;
+}
+
+.img {
+    width: 100%;
+    border: 1px solid #F2F2F2;
+}
+
+.shadow {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 2.5em;
+    color: #fff;
+    line-height: 2.5em;
+    font-size: 1.1em;
+    padding-left: 1px;
+}
+
+.shadow p {
+    padding-left: 0.5em
+}
+
+.purright {
+    line-height: 27px;
+    float: right;
+}
+
+.c5 {
+    color: rgba(40,40,40,0.5);
+}
+
+.price {
+    position: relative;
+    padding: 10px 10%;
+    line-height: 28px;
+    font-size: 14px;
+    text-align: center;
+    background: #fff
+}
+
+.price .sendmoney,.price .postage {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.price .sendmoney {
+    border-right: 1px solid #DADADA;
+}
+
+.price p {
+    margin: 0;
+    padding: 0
+}
+
+.content-block-title {
+    padding: 12px 15px;
+    background: #EEEEEE
+}
+
+.sendsample {
+}
+.sendsample .samplelist{
+    padding: 15px;
+}
+.sendsample img{width: 100%;vertical-align: bottom;}
+.sendsample .sendimg{
+    display: inline-block;
+width: 60px;
+vertical-align: middle;
+}
+.sendsample .sendtitle{
+    display: inline-block;
+margin-left: 10px;
+}
+.sendsample .sendchoose{
+background: url(../images/no.png) no-repeat;
+background-size: 100% 100%;
+display: inline-block;
+float: right;
+width: 22px;
+height: 22px;
+margin-top: 17px;
+}
+.sendsample .sendchoose.obj{
+background: url(../images/yes.png) no-repeat;
+background-size: 100% 100%;
+display: inline-block;
+float: right;
+width: 22px;
+height: 22px;
+margin-top: 17px;
+}
+.sendrule{
+    padding: 15px 15px 0 15px
+}
+.sendsample span {
+    background: #F2F2F2;
+    width: 85px;
+    height: 30px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border: 1px solid #F2F2F2;
+}
+
+.sendsample .selected {
+    color: #28cdc3;
+    border: 1px solid #28cdc3;
+    background: #fff
+}
+.submit{
+    position: fixed;
+width: 100%;
+bottom: 0;
+max-width: 640px;
+}
+.submit .btn{
+border: 0;
+width: 100%;
+height: 50px;
+border-radius: 0;
+background: #28cdc3;
+font-size: 16px;
+color: #fff;
+}
+
+.design input{
+background: #FFFFFF;
+border:0;
+height: 40px;
+width: 60%;
+border-radius: 0;
+padding: 0 10px;
+font-size: 16px;
+border-bottom: 1px solid;
+}
+/*.design  .smtri {
+    border-left: 5px solid #282828;
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+    position: absolute;
+    margin-top: 4px;
+    margin-left: 5px;
+}*/
+.superiority{
+    float: left;
+}
+.deschoose{
+    float: left;
+width: 75%;
+}
+.deschoose span{
+    display: block;
+width: 80px;
+margin: 0 5px 14px 0;
+height: 35px;
+background: #C0C0C1;
+color: #fff;
+text-align: center;
+line-height: 35px;
+}
+.deschoose span.obj{
+    background:#302E31;
+}
+.deschoose span.zhan
+{
+    background:transparent;
+}
+.design .designer{
+background: url(../images/no.png) no-repeat;
+background-size: 100% 100%;
+display: inline-block;
+width: 22px;
+height: 22px;
+margin-top: 17px;
+}
+.design .designer.obj{
+background: url(../images/yes.png) no-repeat;
+background-size: 100% 100%;
+display: inline-block;
+width: 22px;
+height: 22px;
+margin-top: 17px;
+}
+@media screen and (min-width:414px) {
+    .bgimg{
+        width: 100%;
+        position: relative;
+        margin-top: -20px;
+        z-index: -1;
+        max-width: 640px;
+    }
+}
+@media screen and (min-width:375px) and (max-width:413px) {
+    .bgimg{
+        width: 100%;
+        position: relative;
+        margin-top: -60px;
+        z-index: -1;
+        max-width: 640px;
+    }
+}
+@media screen and (max-width:374px) {
+    .bgimg{
+        width: 100%;
+        position: relative;
+        margin-top: -100px;
+        z-index: -1;
+        max-width: 640px;
+    }
+}
+.mt-30{
+    margin-top: 30px;
+}

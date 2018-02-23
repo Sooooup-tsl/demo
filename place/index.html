@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>窗帘demo</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" href="css/ui-base.css">
+<link rel="stylesheet" href="css/ui-box.css">
+<link rel="stylesheet" href="css/ui-color.css">
+</head>
+<body class="layout bj">
+	<div class="page">
+		<div class="space bb1">
+			<p>请选择您想搭配的空间</p>
+			<div class="ub ub-pj">
+				<div class="ub room ub-pc" name="keting">客厅</div>
+				<div class="ub room ub-pc" name="zhuwo">主卧</div>
+				<div class="ub room ub-pc" name="ciwo">次卧</div>
+			</div>
+		</div>
+		<div class="style">
+			<p>请选择您家居风格</p>
+			<div class="ub ub-pj">
+				<div class="ub room ub-pc" id="1">现代</div>
+				<div class="ub room ub-pc" id="2">简约</div>
+				<div class="ub room ub-pc" id="3">美式</div>
+			</div>
+			<div class="ub ub-pj">
+				<div class="ub room ub-pc" id="4">欧式</div>
+				<div class="ub room ub-pc" id="5">田园</div>
+				<div class="ub room ub-pc" id="6">中式</div>
+			</div>
+		</div>
+		<div class="footer">
+			<p onclick="jump()">开始搭配</p>
+		</div>
+	</div>
+</body>
+<script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript">
+	var space='' ;
+	var styleId='';
+	$(".space .room").click(function () {
+		$(".space .room").removeClass("select")
+		$(this).addClass("select");
+		space=$(this).attr("name")
+	})
+	$(".style .room").click(function () {
+		$(".style .room").removeClass("select")
+		$(this).addClass("select")
+		styleId=$(this).attr("id")
+	})
+	function jump(){
+		if(Util.isEmpty(space)){
+			Util.info("请选择您想搭配的空间");
+			return;
+		}
+		if(Util.isEmpty(styleId)){
+			Util.info("请选择您家居风格");
+			return;
+		}
+		location.href="type.html?space="+space+"&styleId="+styleId;
+	}
+</script>
+</html>

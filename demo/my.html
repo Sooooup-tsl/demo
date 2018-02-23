@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>  
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	    <meta content="telephone=no" name="format-detection">
+	    <link href="css/common.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="css/main.css?v072800">
+	</head>
+	<body class="layout">
+		<div id="index" >
+			<div class="head">
+				<img src="images/top.png"/>
+			</div>
+			<!-- 我的参赛信息 -->
+			<div class="information">
+				<div class="person">
+					<div class="person-head">
+						<a href="index.html"><img src="images/close.png" class="close"></a>
+    					<img src="images/baby/8.jpg">
+    					<div class="shadow-tip">
+    						<span class="person-no">NO:0001</span>
+    						<span class="person-name">李佳佳</span>
+    					</div>
+    				</div>
+					<div class="person-foot">
+						<p>票数：<span class="vote-num">0</span></p>
+						<p>参赛宣言：我的笑容最无敌</p>
+					</div>
+    			</div>
+				<div class="three-btn">
+					<button id="tovote">我要投票</button>
+					<button id="toupdate">重新上传</button>
+					<button id="toback">点击返回</button>
+				</div>
+    		</div>
+		</div>
+		<div class="friend">
+			<div class="tab">
+				<div>主人,就是这些<br>坏人捣乱的！</div>
+				<div>主人,帮忙的人要<br>感谢一下哦！</div>
+			</div>
+			<div>
+				<table></table>
+			</div>
+		</div>
+        <div id="common">
+            <div style="background:#E8F89D">
+            	<img src="images/green.png" style="width: 100%;">
+            </div>
+        	<div class="prize">
+        		<div class="prize-title">奖品设置</div>
+        		<div class="prize-content">
+        			<p>1.文字文字文字文字文字文字文字文字</p>
+        			<p>1.文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+        			<p>1.文字文字文字文字文字文字文字文字</p>
+        		</div>
+        	</div>
+        	<div class="rule">
+        		<div class="rule-title">活动规则</div>
+        		<div class="rule-content">
+        			<p>1.文字文字文字文字文字文字文字文字</p>
+        			<p>1.文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+        			<p>1.文字文字文字文字文字文字文字文字</p>
+        		</div>
+        	</div>
+        </div>
+		<!-- 底部分类 -->
+		<div class="footer">
+			<div class="footer-bar">
+				<div><a href="index.html"><img src="images/1.png"/></a></div>
+				<div><a href="rank.html"><img src="images/2.png"/></a></div>
+				<div><a href="join.html"><img src="images/3.png"/></a></div>
+				<div><img src="images/4.png" class="rule"/></div>
+			</div>
+		</div>
+
+		<!-- 浮层弹框显示 End-->
+		<div class="rule-fixed hide">
+			<img src="images/share.png" style="width:100%" onclick="$(this).parent().hide()"/>
+		</div>
+	</body>
+    <script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+	<script charset="utf-8" type="text/javascript">
+		$(function(){
+			//获取图片高度
+			var h=$(".box img").css("height");
+			$(".dynamic").css("line-height",parseInt(h)*0.22+"px");
+		    //提示转发信息
+	    	$(".rule").click(function(){
+	    		$(".rule-fixed").show();
+	    	});
+
+	    	//投票
+	    	$("#tovote").click(function(){
+	    		if($(this).hasClass("hasvoted")){
+	    			Util.showmsg("你已经投过票了")
+		    	}
+		    	else{
+		    		var num=parseInt($(".vote-num").text());
+		    		num+=1;
+		    		$("#tovote").addClass("hasvoted");
+	    			$(".vote-num").text(num)
+		    	}
+	    	});
+	    	$("#toupdate").click(function(){
+	    		Util.showmsg("重新上传照片后，原照片的所有信息及票数将被清空，确定重新上传吗？","","","confirm")
+	    	});
+	    	$("#toback").click(function(){
+	    		location.href="index.html";
+	    	});
+		});
+
+	</script>
+</html>

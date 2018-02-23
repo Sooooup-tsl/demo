@@ -1,0 +1,176 @@
+.bj {
+    background: #fff;
+    width: 100%;
+}
+
+.form-login {
+    margin: 0 5% 0 5%;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+.form-login .inputbg{
+    text-align: center;
+}
+.form-login label {
+    font-size: 1rem;
+    color: #282828;
+}
+
+.form-login input {
+    border: 0;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+    height: 40px;
+    width: 77%;
+    line-height: 40px;
+    background: #eee;
+    margin-left: 0.5rem;
+    border-radius: 0;
+}
+
+.submit {
+    width: 80%;
+    bottom: 0;
+    max-width: 640px;
+    margin: auto;
+}
+
+.submit button {
+    border: 0;
+    width: 100%;
+    height: 45px;
+    border-radius: 0;
+    background: #E50642;
+    font-size: 16px;
+    color: #fff;
+}
+
+.goods,.color,.money {
+    text-align: center;
+    position: relative;
+}
+
+.goods select,.color select {
+    width: 75%;
+    padding-left: 0.5em;
+    margin-left: 0.5rem;
+    font-size: 16px;
+    color: #282828;
+    height: 40px;
+    line-height: 40px;
+    border: 0;
+    border-radius: 0;
+    background: url(../images/arrowdown.png) no-repeat #f4f4f4;
+    background-size: 20px;
+    background-position: 95%;
+    -webkit-appearance: none;
+}
+
+.money input {
+    border: 0;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+    height: 40px;
+    width: 75%;
+    line-height: 40px;
+    background: #eee;
+    margin-left: 0.5rem;
+}
+
+.money span {
+    position: absolute;
+    right: 15px;
+    line-height: 40px;
+}
+
+.header {
+    background: url(../images/headtop.png) no-repeat #fff;
+    background-size: 100% 100%;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+.header .headimg {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    padding: 30px 0 10px 0;
+}
+.header h2{
+    font-size: 1.4rem;
+}
+.header .headimg img {
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+.orderinfo {
+    margin: 0 10%;
+}
+
+.orderinfo .order-content {
+    padding: 1rem 0.5rem;
+    background: #f4f4f4;
+    margin-top: 0.5rem
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 1rem;
+    color: #282828;
+}
+
+table tbody tr td {
+    padding: 0.5rem 0
+}
+
+table tbody tr td:nth-child(1) {
+    color: #B9B6B6;
+    width: 31%;
+    text-align: right;
+}
+
+table tbody tr td:nth-child(2) {
+    text-align: left;
+}
+
+.success {
+    text-align: center;
+    color: #e31246;
+    font-weight: 700;
+    font-size: 1.5rem
+}
+
+.friend-item div {
+    display: inline-block;
+}
+
+.friend-item div:nth-child(1) {
+    width: 50px;
+    height: 50px;
+    vertical-align: bottom;
+}
+
+.friend-item div:nth-child(1) img {
+    border-radius: 50%;
+    border: 1px solid #d4d4d4;
+}
+
+.friend-item div:nth-child(2) {
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+
+.qrcode {
+    text-align: center;
+    width: 60%;
+    margin: 10% 20%;
+}
+
+.qrcode img {
+    width: 100%
+}

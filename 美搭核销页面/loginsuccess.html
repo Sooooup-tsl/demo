@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>美搭美家</title>
+    <meta charset="utf-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+</head>
+<body>
+	<div class="bj">
+		<div class="header">
+			<div class="headimg">
+				<img src="images/headimg.png">
+			</div>
+			<h2>刘刚</h2>
+		</div>
+		<div class="form-login">
+			<div class="mt1 goods">
+				<label>商品名</label>
+				<select id="goods">
+					<option value="0">请选择商品名称</option>
+					<option value="1">窗帘1</option>
+					<option value="2">窗帘2</option>
+				</select>
+			</div>
+			<div class="mt1 color">
+				<label>颜&nbsp;&nbsp;&nbsp;色</label>
+				<select id="color">
+					<option value="0">请选择商品颜色</option>
+					<option value="1">白色</option>
+					<option value="2">蓝色</option>
+				</select>
+			</div>
+			<div class="mt1 money">
+				<label>金&nbsp;&nbsp;&nbsp;额</label>
+				<input type="text" id="money" placeholder="请填写金额"><span>元</span>
+			</div>
+		</div>
+		<div class="submit mt2">
+			<button>生成二维码</button>
+		</div>
+	</div>
+</body>
+<script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript">
+$(function () {
+	var goods=0
+	var color=0
+	var money="";
+	$("#goods").change(function(){
+		goods=$("#goods option:selected").val()
+	})
+	$("#color").change(function(){
+		color=$("#color option:selected").val()
+	})
+	$(".submit").click(function(){
+		money=$("#money").val();
+		if(goods=="0"){
+			Util.info("请选择商品");
+			return;
+		}
+		if(color=="0"){
+			Util.info("请选择颜色");
+			return;
+		}
+		if(Util.isEmpty(money)){
+			Util.info("请输入金额");
+			return;
+		}
+		location.href="qrcode.html"
+	})
+});
+</script>
+</html>

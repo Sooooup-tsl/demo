@@ -1,0 +1,211 @@
+.bj {
+    background: url(../images/bj.png) no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+    color: #fff;
+}
+
+.page {
+    padding: 0 10% 10%;
+}
+
+.space,.style {
+    padding: 15% 0;
+}
+
+.space p,.style p {
+    padding-bottom: 5%
+}
+
+.room {
+    width: 80px;
+    border: 1px solid #fff;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    margin-bottom: 5%;
+}
+
+.select {
+    background: #FB427C;
+    border: 1px solid #FB427C;
+}
+
+.footertype {
+    padding: 15px 0;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    max-width: 640px;
+    z-index: 100
+}
+
+.scroll {
+    overflow-x: scroll;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.furnituretype img {
+    padding-left: 20px;
+    vertical-align: bottom;
+}
+
+.footertype img {
+    width: 120px;
+}
+
+.two-type {
+    padding-bottom: 20px;
+    color: #fff;
+}
+
+.two-type div {
+    padding: 0 20px;
+    height: 40px;
+    font-size: 30px
+}
+
+.two-type .obj {
+    color: #f9467d
+}
+
+.model .ub {
+    margin-right: -120px;
+    height: 148px;
+    width: 120px;
+    position: relative;
+    background: #fff;
+}
+
+.model img {
+    width: 100%;
+    position: relative;
+/*padding: 26px 0;*/
+}
+
+.model .back {
+    position: fixed;
+    z-index: 5;
+    margin-left: 20px;
+    height: 148px;
+    background: transparent;
+}
+
+.model .back img {
+    border-radius: 50%;
+    padding: 20px;
+    width: 50px;
+    box-shadow: 0 0 10px black;
+    background: #fff;
+}
+
+.model .ub:nth-child(2) {
+    margin-left: 140px;
+}
+
+.model .mask img {
+    background: transparent;
+}
+
+.model .mask img {
+    width: 80px;
+    padding: 0;
+}
+
+.model .mask {
+    height: 148px;
+    width: 120px;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+}
+
+.model-style .mask {
+    background: rgba(248,119,159,0.5);
+}
+
+.model-color .mask {
+    background: transparent;
+}
+
+.bg-color1 {
+    height: 148px;
+    width: 120px;
+/* position: absolute; */
+    background: #B7E0FF;
+}
+
+.bg-color2 {
+    height: 148px;
+    width: 120px;
+/* position: absolute; */
+    background: #FFF7CD;
+}
+
+.move {
+    -webkit-transform: translate(-100%,0);
+    -webkit-transition: all 0.3s linear;
+}
+
+.curtain_big {
+    overflow: hidden;
+}
+
+#img-wall {
+    width: 100%
+}
+
+#img-lamp {
+    width: 265px;
+    position: absolute;
+    top: 33px;
+    left: 118px;
+}
+
+#img-curtain {
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    top: 287px;
+    left: 9px;
+    z-index: 2;
+}
+
+#img-floor {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+#img-sofa {
+    width: 500px;
+    position: absolute;
+    top: 494px;
+    right: -72px;
+    z-index: 2;
+}
+
+#img-teapoy {
+    width: 250px;
+    position: absolute;
+    top: 569px;
+    left: 120px;
+    z-index: 3;
+}
+
+.filtergray {
+    -webkit-filter: grayscale(1);
+}
+
+.circle-tips {
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    top: 387px;
+    left: 302px;
+    z-index: 2;
+}

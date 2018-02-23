@@ -1,0 +1,372 @@
+@CHARSET "UTF-8";
+
+body {
+	background-color: #EEEEEE;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	color: #545454;
+}
+
+.tips .c2,.tips .c4 {
+	font-family: "arial"
+}
+
+.hide {
+	display: none;
+}
+
+.ffa {
+	font-family: "arial"
+}
+
+.fs10 {
+	font-size: 10px
+}
+.fs10op{
+	color: rgba(255,255,255,0.6);
+}
+.fs12 {
+	font-size: 12px
+}
+
+.fs13 {
+	font-size: 13px
+}
+
+.fs14 {
+	font-size: 14px
+}
+
+.fs15 {
+	font-size: 15px
+}
+
+.fs16 {
+	font-size: 16px
+}
+
+.fs17 {
+	font-size: 17px
+}
+
+.fs18 {
+	font-size: 18px
+}
+
+.fs19 {
+	font-size: 19px
+}
+
+.fs20 {
+	font-size: 20px
+}
+
+.fs22 {
+	font-size: 22px
+}
+
+.fs25 {
+	font-size: 25px
+}
+
+.opac07 {
+	opacity: 0.7
+}
+
+.c1 {
+	color: #454545;
+}
+
+.c2 {
+	color: #28cdc3;
+/*绿色*/
+}
+.c2o {
+	color: #e31246;
+/*粉色*/
+}
+.c3 {
+	color: #ACACAC;
+/*订金灰色*/
+}
+
+.c4 {
+	color: #282828;
+/*主色黑*/
+}
+
+.inline-block {
+	display: inline-block
+}
+
+* {
+	margin: 0;
+	padding: 0
+}
+
+a,a:link {
+	text-decoration: none;
+	color: inherit;
+}
+
+.bb1 {
+	border-bottom: 1px solid #E5E5E5;
+}
+.bt15{border-top: 15px solid #F8F8F8;}
+.bb-15 {
+	border-bottom: 15px solid #efefef;
+}
+
+.bt1 {
+	border-top: 1px solid #E5E5E5;
+}
+
+.br1 {
+	border-right: 1px solid #efefef;
+}
+
+.pb-30 {
+	padding-bottom: 30px;
+}
+
+.pt-15 {
+	padding-top: 15px;
+}
+.pd10{
+	padding: 10px
+}
+.mb-40 {
+	margin-bottom: 40px;
+}
+
+.mt-15 {
+	margin-top: 15px;
+}
+
+.mb-15 {
+	margin-bottom: 15px;
+}
+
+.col28 {
+	color: #282828
+}
+
+.bg-white {
+	background: #fff;
+}
+
+.fleft {
+	float: left
+}
+
+.fright {
+	float: right;
+}
+
+.ta-center {
+	text-align: center;
+}
+
+.ta-right {
+	text-align: right;
+}
+
+h1 {
+	font-size: 20px
+}
+
+h2 {
+	font-size: 18px
+}
+
+h3 {
+	font-size: 17px
+}
+
+h1,h2,h3 {
+	font-weight: normal;
+}
+
+.pdtb {
+	padding: 5px 0
+}
+
+.lh24 {
+	line-height: 24px
+}
+
+.swipetouch {
+	-moz-user-select: -moz-none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	overflow-x: hidden;
+	word-break: break-all;
+	word-wrap: break-word;
+	overflow-y: scroll;
+	-webkit-box-sizing: border-box;
+	-webkit-overflow-scrolling: touch;
+	height: 100%;
+}
+
+.layout {
+	width: 100%;
+	max-width: 640px;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+	height: 100%;
+}
+
+.buttn {
+	background-color: #76B33C;
+	padding: 7px 15px;
+	border-radius: 19px;
+	color: #fff;
+	display: inline-block;
+	margin-top: 13px;
+	position: relative;
+	border: 0;
+	float: right;
+	font-size: 1.2rem;
+	right: 10px
+}
+
+.buttn-over {
+	background-color: #A9A9A9;
+	padding: 7px 15px;
+	border-radius: 5px;
+	color: #fff;
+	display: inline-block;
+	position: relative;
+	border: 0;
+	float: right;
+	font-size: 1.2rem;
+	right: 10px
+}
+
+.btn-fade {
+	background: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 115;
+	text-align: center;
+}
+
+.btn-box {
+	margin: 0 auto;
+	width: 80%;
+	background: white;
+	border-radius: 3px;
+	margin-top: 60%;
+}
+
+.btn-sure,.btn-cancel {
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	color: #28cdc3;
+	width: 45%;
+}
+
+.btn-title {
+	padding: 17px 13px;
+	font-size: 18px;
+	border-bottom: 1px solid #efefef;
+	color: #333333;
+	line-height: 24px;
+}
+
+.zoom {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.9);
+	padding: 20px 0;
+	z-index: 23;
+	width: 100%;
+}
+
+.buttons-tab .button {
+	margin: 0 10px;
+}
+
+.buttons-tab .button.active {
+	color: #28cdc3;
+	border-color: #28cdc3;
+	z-index: 100;
+}
+
+.rich-text {
+	padding: 10px 5%
+}
+
+.rich-text p {
+	padding: 0;
+	margin: 0;
+	line-height: 24px
+}
+
+.rich-text img {
+	width: 100%
+}
+.lineclamp {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+#loading{
+	text-align:center;
+	position:fixed;
+	top:45%;
+	height:100%;
+	left:50%;
+}
+
+/*弹框样式*/
+.imgzoom_pack{
+	width:100%;
+	height:100%;
+	position:fixed;
+	left:0;
+	top:0;
+	background:rgba(0,0,0,.7);
+	z-index: 999;
+	display:none;
+}
+.imgzoom_pack .imgzoom_x{
+	color:#000;
+	height:30px;
+	width:30px;
+	line-height:30px;
+	background:#fff;
+	border-radius: 50%;
+	text-align:center;
+	position:absolute;
+	right:5px;
+	top:5px;
+	z-index:10;
+	cursor:pointer;
+}
+.imgzoom_pack .imgzoom_img{
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0;
+	top:0;
+	overflow:hidden;
+}
+.imgzoom_pack .imgzoom_img img{
+	width:100%;
+	position:absolute;
+	top:50%;
+}

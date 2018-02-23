@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>  
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	    <meta content="telephone=no" name="format-detection">
+	    <link href="css/common.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="css/main.css?v072800">
+        <link rel="stylesheet" href="css/ui-box.css?v072800">
+        <link rel="stylesheet" href="css/animate.css?v072800">
+	</head>
+	<body class="layout">
+		<div id="index" >
+            <div class="head">
+                <img src="images/top.png"/>
+            </div>
+            <div class="box">
+                <div class="ub ub-ac ub-pj">
+                    <div class="ub ub-pc ub-f1 w0 ta-center">浏览人数<br/>80</div>
+                    <div class="ub ub-pc ub-f1 w0 ta-center">参与人次<br/>2563</div>
+                    <div class="ub ub-pc ub-f1 w0 ta-center">投票人数<br/>10000</div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="titlework">
+                    <img src="images/icon-prod.png">
+                </div>
+                <div class="content-bj">
+                    <div class="">
+                        <div class="person">
+                            <div class="person-head">
+                                <img src="images/baby/1.jpg" class="img_logo">
+                                <div class="shadow-tip">
+                                    <span class="person-no">总票数:90票</span>
+                                    <span class="person-name">李佳佳</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="opera">
+                            <span id="btn">
+                                点击
+                            </span>
+                            <span class="num hide">+1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="common">
+            <div class="rule">
+                <div class="rule-title">
+                    <img src="images/icon-rule.png">
+                </div>
+                <div class="rule-content">
+                    <p>1、上传你家的窗帘，邀请好友吐槽，票选最丑的窗帘，美搭美家免费给您换一个。</p>
+                    <p>2、好友有“挺好哒”和“真丑呀”两个选择，票数排行有“真丑呀”减去“挺好哒”所得。</p>
+                    <p>3、每人投票后有一次修改的机会。</p>
+                    <p>4、记得拉拢好友，不要让他成为你的绊脚石哦！</p>
+                    <p>5、必须上传自家窗帘照片，如发现为网上图片，则取消资格；</p>
+                    最终解释权归美搭美家所有。</p>
+                </div>
+            </div>
+        </div>
+        <!-- 底部分类 -->
+        <div class="footer-bar">
+            <div class="ub ub-pj ">
+                <div class="ub ub-f1 w0 ub-ac ub-pc"><a href="index.html"><img src="images/1.png"/></a></div>
+                <div class="ub ub-f1 w0 ub-ac ub-pc"><a href="rank.html"><img src="images/2.png"/></a></div>
+                <div class="ub ub-f1 w0 ub-ac ub-pc"><a href="join.html"><img src="images/3.png"/></a></div>
+                <div class="ub ub-f1 w0 ub-ac ub-pc"><img src="images/4.png" class="rule"/></div>
+            </div>
+        </div>
+
+		<!-- 浮层弹框显示 End-->
+		<div class="rule-fixed hide">
+			<img src="images/share.png" style="width:100%" onclick="$(this).parent().hide()"/>
+		</div>
+	</body>
+    <script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+	<script charset="utf-8" type="text/javascript">
+        (function ($) {
+            $.extend({
+                tipsBox: function (options) {
+                    options = $.extend({
+                        obj: null,  //jq对象，要在那个html标签上显示
+                        str: "+1",  //字符串，要显示的内容;也可以传一段html，如: "<b style='font-family:Microsoft YaHei;'>+1</b>"
+                        startSize: "12px",  //动画开始的文字大小
+                        endSize: "30px",    //动画结束的文字大小
+                        interval: 500,  //动画时间间隔
+                        color: "red",    //文字颜色
+                        callback: function () { 
+                            console.log("1")
+                        }    //回调函数
+                    }, options);
+                    $(".num").removeClass("hide")
+                    var box = $(".num");
+                    var left = options.obj.offset().left + options.obj.width() / 2;
+                    var top = options.obj.offset().top - options.obj.height();
+                    box.css({
+                        "position": "absolute",
+                        "left": left + "px",
+                        "top": top + "px",
+                        "z-index": 9999,
+                        "font-size": options.startSize,
+                        "line-height": options.endSize,
+                        "color": options.color
+                    });
+                    box.animate({
+                        "font-size": options.endSize,
+                        "opacity": "0",
+                        "top": top - parseInt(options.endSize) + "px"
+                    }, options.interval, function () {
+                        box.remove();
+                        options.callback();
+                    });
+                }
+            });
+        })(jQuery);
+        $(function () {
+            $("#btn").click(function () {
+                if(!$("#btn").hasClass("has")){
+                    $.tipsBox({
+                        obj: $(this),
+                        str: "+1",
+                        callback: function () {
+                            $("#btn").addClass("has")
+                        }
+                    });
+
+                }
+            });
+        });
+	</script>
+</html>

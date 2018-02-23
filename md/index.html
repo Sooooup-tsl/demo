@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>  
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	    <meta content="telephone=no" name="format-detection">
+	    <link rel="stylesheet" href="css/sm.min.css">
+		<link rel="stylesheet" href="css/address.css">
+		<link rel="stylesheet" href="css/order.css">
+		<link rel="stylesheet" href="css/ui-bar.css">
+	    <link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/ui-box.css">
+	</head>
+	<body class="layout" style="background: #F7F7F7">
+		<div id="index">
+			<!-- 轮播图 Start-->
+			<div class="slide" id="slide">
+				<ul>
+					<li>
+						<img src="images/index/s1.png"/>
+					</li>
+					<li>
+						<img src="images/index/s1.png"/>
+					</li>
+					<li>
+						<img src="images/index/s1.png"/>
+					</li>
+			 	</ul>
+			 	<div class="dot">
+				 	<span></span>
+				 	<span></span>
+				 	<span></span>
+			 	</div>
+			</div>
+			<!-- 轮播图 End-->
+			<div class="tab ub ub-pj">
+				<div class="icon1 ub">新品推荐</div>
+				<div class="icon2 ub">热门搭配</div>
+				<div class="icon3 ub">选购攻略</div>
+			</div>
+			<div class="">
+				<!-- 商家Start -->
+				<div class="busi-brand">
+					<img src="images/index/1.png">
+				</div>
+				<!-- 商家End -->
+				<!-- 商家Start -->
+				<div class="busi-brand">
+					<img src="images/index/2.png">
+				</div>
+				<!-- 商家End -->
+				<!-- 商家Start -->
+				<div class="busi-brand">
+					<img src="images/index/3.png">
+				</div>
+				<!-- 商家End -->
+				<!-- 商家Start -->
+				<div class="busi-brand">
+					<img src="images/index/4.png">
+				</div>
+				<!-- 商家End -->
+			</div>
+		</div>
+	</body>
+    <script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/swipe.min.js"></script>
+    <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+    <script type="text/javascript" src="//g.alicdn.com/msui/sm/0.5.6/js/sm-city-picker.min.js" charset="utf-8"></script>
+	<script charset="utf-8" type="text/javascript">
+		$(function(){
+			//轮播demo Start
+		    $('#slide').swipeSlide({
+		    	autoSwipe:false,
+		        speed : 3000,
+		        transitionType : 'cubic-bezier(0.22, 0.69, 0.72, 0.88)',
+		        callback : function(i){
+		            $('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+		        }
+		    });
+		    //轮播demo End
+		    $(".busi-brand").click(function(){
+		    	location.href="desc.html"
+		    })
+
+		});
+	</script>
+</html>

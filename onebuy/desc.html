@@ -1,0 +1,335 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<title>商品详情</title>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="css/common.css" >
+	<link rel="stylesheet" href="css/ui-box.css">
+	<link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/ui-bar.css">
+    <link rel="stylesheet" href="css/address.css">
+	<style type="text/css">
+	.list-block .item-content{padding-left: 0}
+	.gooddesc{padding: 0 20px;}
+    .gooddesc h2{padding-bottom: 8px;}
+	</style>
+</head>
+<body ng-app="">
+	<div class="layout" style="background: #efefef">
+		<div id="desc" class="" style="padding-bottom:100px">
+			<!-- 轮播图 Start-->
+			<div class="slide rich-text" id="slide">
+				<ul>
+					<li>
+						<img src="images/img/lunbo1.png"/>
+					</li>
+					<li>
+						<img src="images/img/lunbo1.png"/>
+					</li>
+			 	</ul>
+                <div class="dot">
+                    <span class="cur"></span>
+                    <span></span>
+                </div>
+			</div>
+			<!-- 轮播图 End-->
+			<div class="container">
+				<div class="ub ub-pj ub-ac  gooddesc">
+					<div class="ub ub-ver ub-f4 w0">
+						<h2 class="ub lineclamp"><b>美式乡村风</b></h2>
+						<div class="ub c1">优雅小香风系列窗帘</div>
+					</div>
+					<div class="ub ubimg ub-f1 w0" style="width:0">
+						<img src="images/icon/sqjy.png">
+					</div>
+				</div>
+			</div>
+			<!-- 商品详情 start-->
+	        <div class="mt-15">
+	        	<div class="tabs">
+                    <div class="rich-text">
+                        <p style="text-align:center;font-size:15px"><b>高密纯棉，原创色彩，愿城市今夜有眠</b></p>
+                        <br>
+                        <p>
+                            60X60高密度纯棉，提供与星级酒店一样的入眠品质，提供繁多原创作品。造物之美，在于使用他人不敢使用的织物，作品之美，在于使用唯有造作用户专享的原创型格。
+                        </p>
+                        <br>
+                        <img src="images/img/l1.png">
+                        <br>
+                        <br>
+                        <p>提供与星级酒店一样的入眠品质</p>
+                        <br>
+                        <img src="images/img/l2.png">
+                        <br>
+                        <br>
+                        <p>提供与星级酒店一样的入眠品质</p>
+                        <img src="images/img/l3.png">
+                    </div>
+	        	</div>
+	        </div>
+	        <div class="bg-white mt-15 howto">
+	        	<h2 class="ta-center">如何测量/安装</h2>
+	        	<div class="longarticle hide">
+	        		<img src="images/1.jpg">
+	        	</div>
+	        	<div class="showmore ta-center"><span>展开更多</span></div>
+	        </div>
+	        <div class="bg-white recommend mt-15">
+	        	<h3 class="ta-center">相关搭配推荐</h3>
+	        	<div class="ub recommend_good">
+	        		<div class="ub ub-ac ub-pc ub-ver pl">
+	        			<div class="ub ubimg">
+	        				<img src="images/img/g1.png">
+	        			</div>
+	        			<div class="ub ub-ac ub-pc ">
+	        				¥<span class="fs18 ffa">59</span> 元 / 个
+	        			</div>
+	        		</div>
+	        		<div class="ub ub-ac ub-pc ub-ver pl">
+	        			<div class="ub ubimg">
+	        				<img src="images/img/g1.png">
+	        			</div>
+	        			<div class="ub ub-ac ub-pc ">
+	        				¥<span class="fs18 ffa">59</span> 元 / 个
+	        			</div>
+	        		</div>
+	        		<div class="ub ub-ac ub-pc ub-ver pl">
+	        			<div class="ub ubimg">
+	        				<img src="images/img/g1.png">
+	        			</div>
+	        			<div class="ub ub-ac ub-pc ">
+	        				¥<span class="fs18 ffa">59</span> 元 / 个
+	        			</div>
+	        		</div>
+	        	</div>
+	        </div>
+            <!-- 评论嵌套 -->
+            <div>
+                <!-- <iframe src="../comment/index.html" name="myFrame" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" onLoad="iFrameHeight()" class="mt-15" id="iframepage"></iframe> -->
+                <div ng-include="'comment/index.html'" class="mt-15"></div>
+            </div>
+	    </div>
+		<!-- 商品详情 end-->
+        <div class="fixed_buy" id="paymoney">
+            <p class="topay" style="width: 50%;">79元 / 米</p>
+            <a href="javascript:void(0)"  onclick="_MEIQIA._SHOWPANEL()"><p class="total"><img src="images/icon/kefu.png" class="img-custom">在线咨询</p></a>
+        </div>
+	    <div>
+			<!-- 浮层弹框显示 Start-->
+			<div class="bg-fixed hide">
+                <div class="bg_f"></div>
+				<div class="info_top">
+					<i class="icon-close"></i>
+			        <img src="images/img/g1.png" id="pic-logo">
+			        <div class="bd">
+                        <h4 class="tips"><span class="c2o">¥ <label class="fs20 ffa">169 </label> 元 / 米 </span></h4>
+			            <p class="bdname">请选择</p>
+			        </div>
+			        <div style="overflow: hidden;">
+				        <div class="scroll_info">
+					    	<div class="chooseitem"><label>尺寸</label>:
+					    		<div class="choosecolor">
+						    		<p>宽4米 高2.6米一副</p>
+						    		<p>宽5米 高2.6米一副</p>
+						    		<p>宽6米 高2.6米一副</p>
+						    		<p>宽7米 高2.6米一副</p>
+						    	</div>
+					    	</div>
+					    	<div class="chooseitem"><label>颜色</label>:
+					    		<div class="choosecolor">
+						    		<p>浅蓝色</p>
+						    		<p>米白色</p>
+						    		<p>米白色</p>
+						    	</div>
+					    	</div>
+                            <div class="chooseitem"><label>面料</label>:
+                                <div class="choosecolor">
+                                    <p>大肚麻</p>
+                                    <p>雪尼尔</p>
+                                </div>
+                            </div>
+					    	<div class="choosenum">购买数量:
+					    		<div class="count">
+									<button id="min1" >－</button>
+									<span id="text_box1">1</span>
+									<button id="add1" type="button" >＋</button>
+								</div>
+					    	</div>
+					    </div>
+				    </div>
+		    		<div class="foot_buy">
+		    			<div class="topay lbuy">确认下单</div>
+		    			<p class="rbuy" id="purchasecar">加入购物车</p>
+		    		</div>
+			    </div>
+			</div>
+
+
+	    	<section class="imgzoom_pack">
+	    		<div class="imgzoom_x">X</div>
+	    		<div class="imgzoom_img"><img src="" /></div>
+	    	</section>
+			<!-- 浮层弹框显示 End-->
+			<!-- 加入购物车 Start-->
+			<div class="rules hide">
+				<div class="rule">
+					<div class="rule-img">
+						<img src="images/icon/icon-car.png">
+					</div>
+					<div class="rule-title">
+						<p class="c2 fs20">已加入购物车</p>
+					</div>
+					<hr>
+					<div class="rule-content">
+						<a href="address.html"><p class="c2o">去结算</p></a>
+						<hr>
+						<p class="c4 opac05" onclick="$(this).parents('.rules').addClass('hide')">继续逛逛</p>
+					</div>
+				</div>
+			</div>
+			<!-- 加入购物车 End-->
+		</div>
+	</div>
+</body>
+<script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/swipe.min.js"></script>
+<script src="js/scale.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/angular.min.js"></script>
+<script>
+	document.addEventListener("DOMContentLoaded", function(event){
+		ImagesZoom.init({
+			"elem": ".rich-text"
+		});
+	}, false);
+</script>
+<script type="text/javascript">
+
+        var scrolltop;
+        $(window).scroll(function() {
+            scrolltop=$("body").scrollTop();
+        })
+		//浮层弹框订单显示
+    	$(".fixed_buy .topay").click(function(e) {
+            document.documentElement.style.overflow = "hidden";
+    		e.preventDefault();
+            $("html,body,#desc").css({
+                "height":"100%",
+                "overflow":" hidden"
+            })
+            $("#desc").animate({
+                scrollTop:scrolltop+"px"
+            }, 0);
+            $(".bg-fixed").removeClass("hide");
+            $(".fixed_buy").addClass("hide");
+            $(".info_top").removeClass("hide");
+            if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+                $(".info_top").addClass("fadeInUp");
+            }
+            var info_h=parseInt($(".info_top").css("height"));
+            var win_h=$(window).height();
+            var bg_f=win_h-info_h;
+            $(".bg_f").css("height",bg_f)
+    	})
+    	//浮层弹框订单消失
+    	$(".icon-close,.bg_f").click(function(){
+            $("html,body,#desc").css({
+                "height":"auto",
+                "overflow":"auto",
+            })
+            $("body").animate({
+                scrollTop:scrolltop+"px"
+            }, 0);
+            $(".bg-fixed").addClass("hide");
+            $(".fixed_buy").removeClass("hide");
+            $(".info_top").addClass("fadeInDown");
+            setTimeout(function() {
+                $(".info_top").addClass("hide");
+                $(".info_top").removeClass("fadeInDown");
+            },
+            500)
+    	})
+        //确认下单
+        $(".foot_buy .topay").click(function(e) {
+            location.href="address.html"
+        })
+    	//浮层弹框尺寸选择
+    	$(".chooseitem p").click(function(){
+	    	$(this).parent().children("p").removeClass("org");
+	    	$(this).addClass("org");
+	    	var obj=""
+	    	$(".chooseitem p.org").each(function(){
+	    		obj+=$(this).text()+'、'
+	    	});
+	    	$(".bdname").html("已选："+obj)
+	    });
+        $("#purchasecar").click(function(){
+            $(".rules").removeClass("hide")
+        })
+	    $(function () {
+	    	//轮播demo Start
+		    $('#slide').swipeSlide({
+		    	autoSwipe:true,
+                continuousScroll:true,
+		        speed : 3000,
+		        transitionType : 'cubic-bezier(0.22, 0.69, 0.72, 0.88)',
+		        callback : function(i){
+		            $('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+		        } 
+		    });
+		    //轮播demo End
+	    	//添加减少购买数量
+			var t = $("#text_box1");
+			$("#add1").click(function () {
+				t.text(parseInt(t.text()) + 1);
+				//var price=$(".foot_buy .topay span").text();
+				//var obj=t.val()*price;
+				//$("#pricetotal").html('订金：￥<span>'+obj+'</span>');
+			})
+			$("#min1").click(function () {
+				if(t.text()>1){
+					t.text(parseInt(t.text()) - 1);
+				}
+				//var price=$(".foot_buy .topay span").text();
+				//var obj=t.val()*price;
+				//$("#pricetotal").html('订金：￥<span>'+obj+'</span>');
+			});
+		})
+    $(".buttons-tab").click(function(){
+		$("body").animate({
+			scrollTop:$(this).offset().top
+		}, 800);
+    })
+    $(".showmore").click(function(){
+        if($(".longarticle").hasClass("hide")){
+        $(".longarticle").toggleClass("hide");
+            $(".longarticle").removeClass("hide");
+            $(".showmore span").text("收起")
+        }else{
+            $(".longarticle").addClass("hide");
+            $("body").animate({
+                scrollTop:$(this).offset().top+300
+            }, 800);
+            $(".showmore span").text("展开更多")
+        }
+            
+    });
+</script>
+<script type="text/javascript">
+    (function(m, ei, q, i, a, j, s) {
+        m[a] = m[a] || function() {
+            (m[a].a = m[a].a || []).push(arguments)
+        };
+        j = ei.createElement(q),
+            s = ei.getElementsByTagName(q)[0];
+        j.async = true;
+        j.charset = 'UTF-8';
+        j.src = i + '?v=' + new Date().getUTCDate();
+        s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '//eco-api.meiqia.com/dist/meiqia.js', '_MEIQIA');
+    _MEIQIA('entId', 6748);
+    _MEIQIA('withoutBtn', true);
+</script>
+
+</html>

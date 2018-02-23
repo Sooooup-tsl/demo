@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>我的地址</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta content="telephone=no" name="format-detection">
+        <link rel="stylesheet" href="css/sm.min.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/order.css">
+		<link rel="stylesheet" type="text/css" href="css/ui-bar.css">
+        <style type="text/css">
+        .busi-desc{margin-left: 35px;}
+        </style>
+	</head>
+	<body class="layout">
+		<div class="page">
+		    <header class="bar-nav">
+		        <div class="header">
+		            <div class="status1 ">购物车<div class="pull-right" id="manage"><span >编辑</span></div></div>
+		        </div>
+		    </header>
+		    <div class="content">
+                <div class="form mt-15 bg-white">
+                    <div class="form-content">
+                        <div class="chooseone icon-c1"></div>
+                        <!-- 已选订单详情 Start-->
+                        <div class="busi-desc bg-white">
+                            <img src="images/img/g1.png" class="img-logo">
+                            <div class="bd">
+                                <h4>新品窗帘新品窗帘新品窗帘新品窗帘</h4>
+                                <p>尺码：<label id="size">宽4米 高2.6米一副</label> 颜色：<label id="color">米白色</label></p>
+                                <div class="tips">
+                                    <span class="fs12 c5">金额：</span>
+                                    <span class="c2o fs18 ffa">¥<label data-money>199</label></span>
+                                    <span class="fright c1">×<label data-num>2</label></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="img-delete hide"></div>
+                    </div>
+                </div>
+                <div class="form mt-15 bg-white">
+                    <div class="form-content">
+                        <div class="chooseone icon-c1"></div>
+                        <!-- 已选订单详情 Start-->
+                        <div class="busi-desc bg-white">
+                            <img src="images/img/g1.png" class="img-logo">
+                            <div class="bd">
+                                <h4>新品窗帘新品窗帘新品窗帘新品窗帘</h4>
+                                <p>尺码：<label id="size">宽4米 高2.6米一副</label> 颜色：<label id="color">米白色</label></p>
+                                <div class="tips">
+                                    <span class="fs12 c5">金额：</span>
+                                    <span class="c2o fs18 ffa">¥<label data-money>599</label></span>
+                                    <span class="fright c1">×<label data-num>1</label></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="img-delete hide"></div>
+                    </div>
+                </div>
+		    </div>
+            <div class="hide">
+                <div class="noorder">
+                    <img src="images/noorder.png"/>
+                    <div>
+                        <p>您还没有相关的订单</p>
+                        <p>可以去看看哪些想买的</p>
+                    </div>
+                    <a href="__APP__/Groups/groupsInit"><button>随便逛逛</button></a>
+                </div>
+            </div>
+            <div class="fixed_buy">
+                <div class="chooseall icon-all-c1"></div>
+                <p class="left_bar"><label>全选</label>合计：¥<span id="heji">0</span></p>
+                <a href="success.html"><p class="right_bar">去下单</p></a>
+            </div>
+		</div>
+	</body>
+    <script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+	<script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+    <script type="text/javascript">
+    function choosemath(){
+        var obj=0
+        $(".form-content .icon-c2").each(function(){
+            var par=$(this).parents(".form-content")
+            var money= par.find("label[data-money]").text()
+            var num= par.find("label[data-num]").text();
+            obj+=money*num
+            $("#heji").html(obj)
+        })
+        if($(".form-content .icon-c2").length==0){
+            $("#heji").html("0")
+        }
+        console.log($(".form-content .icon-c2"))
+    }
+    $(".form-content .chooseone").click(function(){
+        $(this).toggleClass("icon-c2");
+        choosemath()
+        var allnum=$(".form-content .icon-c1").length
+        if($(".form-content .icon-c2").length!=allnum){
+            $(".chooseall").removeClass("icon-all-c2");
+        }else if($(".form-content .icon-c2").length==allnum){
+            $(".chooseall").addClass("icon-all-c2");
+        }
+    })
+    // 全选
+    $(".chooseall").click(function(){
+        $(this).toggleClass("icon-all-c2");
+        if($(".chooseall").hasClass("icon-all-c2")){
+            $(".icon-c1").addClass("icon-c2")
+        }else{
+            $(".icon-c1").removeClass("icon-c2");
+            $("#heji").html("0")
+        }
+        choosemath()
+    })
+    $("#manage").click(function () {
+        $(this).html('<span id="cancel">完成</span>');
+        $(".img-delete").removeClass("hide");
+        $(".form-content").addClass("move");
+        //选择默认地址
+        $(".form").click(function(){
+        })
+    })
+    
+    $(document).on("click","#cancel",function(){
+        $(".form").unbind();
+        $(".pull-right").html('<span>编辑</span>');
+        $(".img-delete").addClass("hide");
+        $(".form-content").removeClass("move");
+    })
+    $(document).on("click",".img-delete",function(){
+        var _this=$(this).parents(".form")
+        Util.showmsg("确定删除么？",
+        function delet(){
+            _this.remove();
+            choosemath();
+        }
+        ,"","confirm")
+        
+    })
+    </script>
+</html>

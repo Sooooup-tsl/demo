@@ -1,0 +1,86 @@
+
+.slide {
+    position: relative;
+    max-width: 640px;
+    overflow: hidden;
+    padding:0
+}
+
+.slide:after {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 90%;
+}
+.slide.taocan:after{
+    padding-top: 63%
+}
+.slide ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.slide li {
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide ul li img {
+    width: 100%;
+    height: auto;
+}
+
+.slide li:first-child {
+    z-index: 1;
+}
+
+.slide .dot {
+    position: absolute;
+    bottom: 4%;
+    font-size: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.slide .dot span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: 5px;
+    background: #D2D5DC;
+}
+
+.slide .dot .cur {
+    background-color: #fff;
+}
+.container{
+    padding: 10px 0;
+background: #fff;
+}
+.recommend {
+    padding: 20px 0;
+    width: 100%;
+}
+.recommend_good{padding: 0 15px;overflow-x: scroll;white-space: nowrap;-webkit-overflow-scrolling: touch;}
+
+.recommend{color: #000}
+.recommend h3{padding-bottom: 12px;color: #000;font-size: 16px}
+.recommend .pl{padding-right: 15px}
+.recommend .ubimg{width: 120px;}
+.recommend .ubimg img{width: 100%}
+
+.howto{padding-bottom:12px}
+.howto h2{padding-top:20px;color:#000}
+.howto .showmore{font-size:16px;color:#E60740;padding-top:28px}
+.howto .showmore span{padding:11px 61px;border-top:1px solid #e4e4e4;text-decoration: underline;}
+.longarticle{padding:15px}
+.longarticle img{width:100%}

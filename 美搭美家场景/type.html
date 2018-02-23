@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>窗帘</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" href="css/ui-base.css">
+<link rel="stylesheet" href="css/ui-box.css">
+<link rel="stylesheet" href="css/ui-color.css">
+<style type="text/css">
+	.hide{display: none !important;}
+</style>
+<!--移动端版本兼容 -->
+<script type="text/javascript">
+    var phoneW = parseInt(window.screen.width), phoneScale = phoneW / 640, ua = navigator.userAgent;
+    if (/Android (\d+\.\d+)/.test(ua)) {
+        var version = parseFloat(RegExp.$1);
+        if (version > 2.3) {
+            document.write('<meta name="viewport" content="width=640, initial-scale=' + phoneScale + ', minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+        } else { document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">'); }
+    } else { document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">'); }
+</script>
+<!--移动端版本兼容 end -->
+</head>
+<body class="layout">
+	<div class="house">
+		<!-- 窗帘大图 -->
+		<div class="curtain_big">
+			<img src="images/imgwall1.png" id="img-wall" class="filtergray">
+			<img src="images/imglamp1.png" id="img-lamp" class="filtergray">
+			<img src="images/imgcurtain1.png" id="img-curtain" class="filtergray">
+			<!-- <div class="circle-tips">
+				<img src="images/circle.png" id="circle" class="shake">
+				<img src="images/tips.png" id="tips">
+			</div>	 -->
+			<img src="images/imgfloor1.png" id="img-floor" class="filtergray">
+			<img src="images/imgsofa1.png" id="img-sofa" class="filtergray">
+			<img src="images/imgteapoy1.png" id="img-teapoy" class="filtergray">
+			<!-- <div class="part-wall">
+				<img src="images/imglamp1.png" id="img-lamp" class="filtergray">
+				<img src="images/imgcurtain1.png" id="img-curtain" class="filtergray">
+			</div>
+			<div class="part-floor">
+				<img src="images/imgsofa1.png" id="img-sofa" class="filtergray">
+				<img src="images/imgteapoy1.png" id="img-teapoy" class="filtergray">
+			</div> -->
+		</div>
+	</div>
+	<div class="footertype">
+		<div class="ub ub-pc two-type">
+			<div class="ub type-style obj"></div>
+			<div class="ub type-color"></div>
+		</div>
+		<div class="scroll">
+			<!-- 家居选择 -->
+			<div class="furnituretype">
+				<img src="images/sofa.png" onclick="choose(1)">
+				<img src="images/teapoy.png" onclick="choose(2)">
+				<img src="images/lamp.png" onclick="choose(3)">
+				<img src="images/floor.png" onclick="choose(4)">
+				<img src="images/wall.png" onclick="choose(5)">
+				<img src="images/curtain.png" onclick="choose(6)">
+				<img src="images/c2.png" onclick="save()">
+			</div>
+			<div class="styletype hide">
+				<!-- 款式选择 -->
+				<div class="model model-style ub">
+				</div>
+				<!-- 颜色选择 -->
+				<div class="model model-color ub hide">
+					<div class="ub ub-ac ub-pc back">
+						<img src="images/back.png">
+					</div>
+					<div class="ub">
+						<div class="bg-color1"></div>
+					</div>	
+					<div class="ub">
+						<div class="bg-color2"></div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<!-- <script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script> -->
+<script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/util.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/main.js"></script>
+</html>

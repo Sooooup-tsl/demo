@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>  
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	    <meta content="telephone=no" name="format-detection">
+	    <link rel="stylesheet" href="css/common.css">
+	    <link rel="stylesheet" href="css/sm.min.css">
+	    <link rel="stylesheet" href="css/newindex.css">
+	</head>
+	<body class="layout" style="background: #fff">
+		<img src="images/new30/personal.png" style="width: 100%;vertical-align: bottom;">
+		<div class="Fabric aboutus">
+			<div class="fabric-content">
+				<!-- 设计师 -->
+				<div class="Fabric">
+					<br>
+					<div class="fabric-content">
+						<h2>设计师Awa</h2>
+						<img src="images/new30/p1.png">
+						<p>毕业于伦敦时装学院<br>
+						喜欢一切美的东西<br>
+						最爱研究各种奢侈品大牌
+						</p>
+						<br>
+						<br>
+						<h2>Factory Outlets</h2>
+						<img src="images/new30/p2.png">
+						<p>去中间化<br>
+						去店面房租成本<br>
+						最大程度让利给消费者
+						</p>
+						<br>
+						<br>
+						<h2>高级定制服务</h2>
+						<img src="images/new30/p3.png">
+						<p>设计师亲自上门<br>
+						根据您家的装修风格<br>
+						私家定制合适的面料和窗帘样式
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 如何预订 -->
+		<div class="Fabric book bg6">
+			<div class="fabric-content">
+				<div class="fabric-content">
+					<h1>如何预订</h1>
+					<h3>-------How to book-------</h3>
+				</div>
+				<div style="text-align:left">
+					<p><b>Step1：</b>填写信息，客服会尽快与您取得联系，
+					确认上门沟通及测量时间。
+					</p>
+					<p><b>Step2：</b>美搭美家设计师准时上门与您沟通，您可以当面选择款式、颜色、面料等，组合衣服喜欢的窗帘。
+					</p>
+					<p><b>Step3：</b>20日以后，就可以为您上门安装您的窗帘。</p>
+				</div>
+			</div>
+		</div>
+		<!-- 预约测量 -->
+		<div class="Fabric measure">
+			<div class="fabric-content">
+				<h1>预约测量</h1>
+				<h3>—————&nbsp;Reservation survey&nbsp;—————</h3>
+			</div>
+			<div class="">
+				<p><input placeholder="姓名" id="name"></p>
+				<p><input placeholder="电话（必填）" id="tel" maxlength="11" type="num"></p>
+			</div>
+			<div class="btn">提交</div>
+			<br>
+		</div>
+		<!-- 关于我们 -->
+		<div class="Fabric aboutus bg6">
+			<br>
+			<div class="fabric-content">
+				<h1>关于我们</h1>
+				<h3>—————&nbsp;About us&nbsp;—————</h3>
+				<br>
+				<img src="images/new30/z4.png">
+
+				<p><br>美搭美搭（to my best home）是一家互联网轻奢软装原创平台，致力于为热爱生活，讲求品质的你提供全屋软装方案。</p>
+				<br>
+				<p>集结了10位创始人的友谊和梦想，美搭美家相信，更多人希望，家是生命中最美的港湾，用绚烂和美好装饰的家，可以点亮更多人的生活</p>
+				<br>
+				<p>不是传统的软装公司，更不是传统的窗帘店，美搭美家只在线定期推出软装单品和全屋系列软装套件。用户通过微信即可预约设计师上门测量，在线选择主材和配件包，5-7个工作日后，将有专业的安装人员负责上门安装。</p>
+				<br>
+				<br>
+			</div>
+		</div>
+		<footer id="footpage">
+			<div class="copyright">
+				<img src="images/new30/code.png">
+				<p style="font-size: 14px;color: #fff;">长按识别二维码关注美搭美家服务号</p>
+			</div>
+		</footer>
+	</body>
+    <script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+	<script type="text/javascript">
+			$(".btn").click(function(){
+		        var name=$("#name").val();
+		        var tel=$("#tel").val();
+		        if (Util.isEmpty(name)) {
+		            Util.info("请输入姓名");
+		            return;
+		        }
+		        if (Util.isEmpty(tel)) {
+		            Util.info("请输入手机号");
+		            return;
+		        }
+		        if (!Util.isMobile(tel)) {
+		                Util.info("手机号格式不正确");
+		                return;
+		        }
+		        $.ajax({
+	                type: "post",
+	                url: "url",
+	                data: "url&name="+name+"&phone=" + tel,
+	                success: function (data) {
+	                     Util.info("提交成功")
+	                }
+	            });
+		    })
+		//})
+	    </script>
+</html>

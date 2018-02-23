@@ -1,0 +1,135 @@
+@CHARSET "UTF-8";
+*{
+    padding:0;
+    margin:0
+}
+body {
+    background-color: #EEEEEE;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #545454;
+}
+
+.hide {
+    display: none;
+}
+
+a,a:link {
+    text-decoration: none;
+    color: inherit;
+}
+.mt_10{
+	margin-top: 10px
+}
+.mb_10{
+	margin-bottom: 10px
+}
+div{
+	position: relative;
+}
+img{
+	width: 100%;
+	vertical-align: bottom;
+}
+.tab{
+        position: relative;
+}
+.tab span {
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    color: #666;
+    margin: 0 15px;
+}
+.tab span.cur{
+    border-bottom: 2px solid #2ebd59;
+    color: #2ebd59
+}
+.busi_city{
+	    position: absolute;
+    top: 15px;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    width: 76px;
+    margin-left: -30px;
+    text-align: right;
+    padding-right: 10px;
+    border-radius: 20px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+}
+.busi_name{
+	position: absolute;
+    bottom: 15px;
+    color: #fff;
+    left: 25px;
+}
+.busi_name h1{
+	font-size: 14px
+}
+.busi_name p{
+	font-size: 10px
+}
+.busi_detail{
+    padding: 10px 20px;
+}
+.busi_price{
+    font-size: 12px;
+    color: #999
+}
+.busi_marketpri{
+    font-family: "arial";
+    font-size: 22px
+}
+.busi_price span{
+    color: #f63
+}
+.busi_price del{
+    margin-left: 6px
+}
+.busi_prog_all{
+    position: relative;
+    margin-top: 0;
+    color: #fff;
+    width: 87px;
+    border-radius: 10px;
+    height: 10px;
+    border: 2px solid #ff6633;
+}
+.busi_prog_all span{
+	    position: absolute;
+    background: #ffdace;
+    border-radius: 10px;
+    width: 25px;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    height: 10px;
+}
+.busi_percent{
+margin-left: 6px;
+    font-size: 12px;
+    color: #f63;
+}
+.busi_btn{
+        border: 0;
+    border-radius: 3px;
+    height: 35px;
+    font-size: 16px;
+    color: #fff;
+    width: 95px;
+}
+.busi_btn.btn_start{
+    background-color: #ff6633;
+}
+.busi_btn.btn_over{
+    background-color: #ccc;
+}
+.busi_btn.btn_remind{
+    background-color: #2ebd59;
+}
+.busi_concern{
+    margin-right: 6px
+}

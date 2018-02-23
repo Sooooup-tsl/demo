@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>美搭美家</title>
+    <meta charset="utf-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+</head>
+<body>
+	<div class="bj">
+		<div class="header">
+			<div class="headimg">
+				<img src="images/headimg.png">
+			</div>
+			<h2>刘刚</h2>
+		</div>
+		<h2 class="success mt1">
+			支付成功！
+		</h2>
+	    <div class="mt1 orderinfo">
+            <p>订单信息</p>
+            <div class="order-content">
+    	    	<table class="">
+    	    		<tr class="">
+    	    			<td>商品名：</td>
+    	    			<td>罗马假日</td>
+    	    		</tr>
+                    <tr>
+                        <td>颜&nbsp;&nbsp;&nbsp;色：</td>
+                        <td>白色</td>
+                    </tr>
+                    <tr>
+                        <td>金&nbsp;&nbsp;&nbsp;额：</td>
+                        <td>480元</td>
+                    </tr>
+    	    	</table>
+            </div>
+	    </div>
+	    <div class="mt1 orderinfo">
+            <p>付款人信息</p>
+            <div class="friend-item mt1">
+                <div>
+                    <img src="images/headimg.png">
+                </div>
+                <div>李倩<br><span id="number">18550095912</span></div>
+            </div>
+        </div>
+        <div class="mt2"></div>
+	</div>
+
+</body>
+<script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript">
+	var str=$("#number").text();
+    $("#number").text(str.substring(0,3)+'****'+str.substring(7,11))
+</script>
+</html>

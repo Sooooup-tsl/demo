@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>小美发红包</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta content="telephone=no" name="format-detection">
+        <link rel="stylesheet" type="text/css" href="css/common.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    <body class="layout">
+        <div>
+            <div class="top pofix">
+                <img src="images/prizelist.png" id="img2">
+            </div>
+            <div class="table">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>潘小p</td>
+                            <td>1.88元</td>
+                            <td>2016-02-29</td>
+                        </tr>
+                        <tr>
+                            <td>陌上花开</td>
+                            <td>88.88元</td>
+                            <td>2016-02-28</td>
+                        </tr>
+                        <tr>
+                            <td>行走的猫咪行</td>
+                            <td>88.88元</td>
+                            <td>2016-02-28</td>
+                        </tr>
+                        <tr>
+                            <td>行走的猫咪行走的猫咪</td>
+                            <td>88.88元</td>
+                            <td>2016-02-28</td>
+                        </tr>
+                        <tr>
+                            <td>行走的猫咪</td>
+                            <td>88.88元</td>
+                            <td>2016-02-28</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="seemore">
+                <button class="btn">加载更多</button>
+            </div>
+        </div>
+    </body>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript">
+    document.getElementById("img2").onload=function(){
+        var imgH=$(".pofix").css("height");
+        $(".table").css("margin-top",imgH) 
+    }
+    $(function() {
+
+        $(".btn").on("click",function(){
+            var html='';
+            $.ajax({
+                type:"get",
+                dataType:"json",
+                url:"prizelist",
+                success:function(data){
+                    for (i = 0; i < data.length; i++) {
+                        html+='<tr><td>'+data[i].nickname+'</td><td>'+data[i].money+'元</td><td>'+data[i].datatime+'</td></tr>'
+                    };
+                    $("table tbody").append(html);
+                    $(".seemore").remove()
+                }
+            })
+            
+        })
+    })
+</script>
+</html>

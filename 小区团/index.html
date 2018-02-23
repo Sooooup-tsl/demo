@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<title>小区团详情</title>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta content="telephone=no" name="format-detection">
+	    <link rel="stylesheet" href="css/common.css">
+	    <link rel="stylesheet" href="css/ui-box.css">
+	    <link rel="stylesheet" href="css/newindex.css">
+	<link rel="stylesheet" href="css/ui-bar.css">
+	<style type="text/css">
+	.list-block .item-content{padding-left: 0}
+	.fourpart{border-top: 1px solid #e4e4e4;}
+	</style>
+</head>
+<body>
+	<div class="layout" style="background: #efefef">
+		<div id="desc" class="">
+			<!-- 小区拼团活动 -->
+			<div class="container bg-white">
+				 <div class="ub ub-ver ub-ac ub-pc lh24 group_area">
+					<div class="ubimg">
+						<img src="images/blank.gif" data-echo="images/new30/a1.png">
+					</div>
+					<h2 class="ub"><b>棕榈湾</b></h2>
+					<p class="ub c1">工业园区</p>
+				</div>
+				<div class="ub ub-pj fourpart mt-15">
+					<div class="ub ub-ver ub-ac ub-pc lh24 ub-f1 w0">
+						<div class="ub ubimg">
+							<img src="images/new30/icon1.png">
+						</div>
+						<div class="ub fs13">已参团</div>
+						<div class="ub fs12">108人</div>
+					</div>
+					<div class="ub ub-ver ub-ac ub-pc lh24 ub-f1 w0">
+						<div class="ub ubimg">
+							<img src="images/new30/icon4.png">
+						</div>
+						<div class="ub fs13">最高优惠</div>
+						<div class="ub fs12">8折</div>
+					</div>
+					<div class="ub ub-ver ub-ac ub-pc lh24 ub-f1 w0">
+						<div class="ub ubimg">
+							<img src="images/new30/icon3.png">
+						</div>
+						<div class="ub fs13">预计结束时间</div>
+						<div class="ub fs12">2016-01-30</div>
+					</div>
+				</div>
+			</div>
+			<div class="mt-15">
+				<div class="friendimg ub ub-pj"> 
+					<div class="ub"><img src="images/sample1.png"><span>团长</span></div>
+					<div class="ub"><img src="images/sample1.png"><span>沙发</span></div>
+					<div class="ub"><img src="images/sample1.png"></div>
+					<div class="ub"><img src="images/sample1.png"></div>
+					<div class="ub"><img src="images/sample1.png"></div>
+					<div class="ub"><img src="images/sample1.png"><span class="unshow">31</span></div>
+				</div>
+			</div>
+			<div class="content mt-15 bg-white">
+				<div class="bardesc">
+					<img src="images/bar.png">
+					<p>参与小区团，购买以下商品，在截止时间前达到相应的人数，即可获得对应的优惠折扣，优惠金额将在确认收货7日内，返现至您的支付账户。</p>
+				</div>
+				<!-- 商品购买 -->
+				<div class="content-item">
+					<div>
+						<img  src="images/blank.gif" data-echo="images/new30/g1.png">
+					</div>
+					<div class="ub ub-pj ub-ae ub-pe group">
+						 <div class="ub ub-ver">
+							<h2 class="ub fs16"><b>地中海风格</b></h2>
+							<p class="ub"><span class="c2">¥ <label class="fs18 ffa">169 </label> 元 / 米 </span></p>
+						</div>
+						<div class="ub">
+							<div class="oneping">购买</div>
+						</div>
+					</div>
+				</div>
+				<!-- 商品购买 -->
+				<div class="content-item">
+					<div>
+						<img  src="images/blank.gif" data-echo="images/new30/g1.png">
+					</div>
+					<div class="ub ub-pj ub-ae ub-pe group">
+						 <div class="ub ub-ver">
+							<h2 class="ub fs16"><b>地中海风格</b></h2>
+							<p class="ub"><span class="c2">¥ <label class="fs18 ffa">169 </label> 元 / 米 </span></p>
+						</div>
+						<div class="ub">
+							<div class="oneping">购买</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	    </div>
+	</div>
+</body>
+<script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/echo.min.js"></script>
+<script type="text/javascript">
+echo.init();
+//购买
+$(".oneping").click(function(){
+	location.href="desc.html"
+})
+</script>
+</html>

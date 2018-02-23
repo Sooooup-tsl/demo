@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title>上传照片</title>  
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	    <meta content="telephone=no" name="format-detection">
+        <link rel="stylesheet" href="css/common.css" >
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/main.css">
+	</head>
+	<body class="layout">
+		<div id="index" >
+            <div class="head">
+                <img src="images/top.png"/>
+            </div>
+            <div class="box">
+                <div class="ub ub-ac ub-pj">
+                    <div class="ub ub-pc ub-f1 w0 ta-center">浏览人数<br/>80</div>
+                    <div class="ub ub-pc ub-f1 w0 ta-center">参与人次<br/>2563</div>
+                    <div class="ub ub-pc ub-f1 w0 ta-center">投票人数<br/>10000</div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="titlework">
+                    <img src="images/icon-upload.png">
+                </div>
+                <div class="content-bj">
+                    <div class="">
+                        <div class="person pdb">
+                            <div class="person-head">
+                                <img src="images/img.jpg" class="img_logo" id="btn_upload">
+                                <div id="comment-photo"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="upload">
+                        <img src="images/upload.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 弧形条 -->
+        <div class="commonbar">
+            <img src="images/commonbar.png">
+        </div>
+        <!-- 底部规则 -->
+        <div id="common">
+            <div class="rule">
+                <div class="rule-title">
+                    <img src="images/icon-rule.png">
+                </div>
+                <div class="rule-content">
+                    <p>1、上传你家的窗帘，邀请好友吐槽，票选最丑的窗帘，美搭美家免费给您换一个。</p>
+                    <p>2、好友有“挺好哒”和“真丑呀”两个选择，票数排行有“真丑呀”减去“挺好哒”所得。</p>
+                    <p>3、每人投票后有一次修改的机会。</p>
+                    <p>4、记得拉拢好友，不要让他成为你的绊脚石哦！</p>
+                    <p>5、必须上传自家窗帘照片，如发现为网上图片，则取消资格；</p>
+                    <p>最终解释权归美搭美家所有。</p>
+                </div>
+            </div>
+        </div>
+        <!-- 底部按钮 -->
+        <div class="footer-bar">
+            <div class="ub ub-pj ">
+                <div class="ub ub-f1 w0 ub-ac ub-pc"><a href="index.html"><img src="images/1.png" class="op50"/></a></div>
+                <div class="ub ub-f1 w0 ub-ac ub-pc"><a href="rank.html"><img src="images/2.png" class="op50"/></a></div>
+                <div class="ub ub-f1 w0 ub-ac ub-pc"><img src="images/3.png" class="rule op50"/></div>
+                <div class="ub ub-f1 w0 ub-ac ub-pc"><a href="join.html"><img src="images/4.png"/></a></div>
+            </div>
+        </div>
+
+        <!-- 浮层弹框显示 End-->
+        <div class="rule-fixed hide">
+            <img src="images/share.png" style="width:100%" onclick="$(this).parent().hide()"/>
+        </div>
+	</body>
+    <script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+	<script src="js/mobile-upload.js"></script>
+	<script charset="utf-8" type="text/javascript">
+		
+	</script>
+	<script>
+	var upload = new Mobile_upload();
+	upload.init({target:$('#btn_upload'),callback:function(result,name,postName){
+		$('#comment-photo').append('<div class="upload-div" ><img src="'+result+'" id="result"/><input type="hidden" name="'+postName+'"/><img src="images/close.png" class="close"></div>');
+		$("#btn_upload").addClass("hide");
+        $('#comment-photo').css({"width":"100%","height":"100%"})
+	}});
+
+	$("#comment-photo").on("click",".upload-div .close",function(){
+		$(this).parent().remove();
+		$("#btn_upload").removeClass("hide");
+        $('#comment-photo').css({"width":"","height":""})
+	})
+    //获奖攻略
+    $(".rule").click(function(){
+        $(".rule-fixed").show();
+    });
+    // 上传
+    $(".upload").click(function(){
+        var html=$("#comment-photo").html();
+        if(html==''){
+            Util.info("请上传照片");
+            return;
+        }
+        location.href="my.html"
+    })
+	</script>
+</html>

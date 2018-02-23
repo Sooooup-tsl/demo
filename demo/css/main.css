@@ -1,0 +1,484 @@
+@CHARSET "UTF-8";
+
+#index .head img{
+	width: 100%
+}
+#index .apply{
+	width: 50%;
+    margin: 0 auto;
+}
+#index .apply img{width: 100%}
+#index .search-bar {
+    margin: 0 10px;
+    background: #DA3A3C;
+}
+
+#index .search-bar input {
+	font-size: 16px
+}
+
+#index .search-bar input::-webkit-input-placeholder {
+	color: #9AC71C;
+}
+
+#index .search-bar input {
+background: url(../images/search.png) no-repeat;
+    background-size: 23px;
+    height: 30px;
+    width: 148px;
+    background-position: 5px;
+    padding: 1px 0 1px 28px;
+    border: 2px solid transparent;
+    border-radius: 5px 0 0 5px;
+    vertical-align: top;
+}
+
+#index .search-bar #searchbutton {
+    padding-top: 3px;
+    float: right;
+    width: 60px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+#index .box {
+	position: relative;
+	color:#fff;margin: 0 5%;line-height: 24px;
+}
+#index .box > div > div:after {
+content: '';
+width: 1px;
+height: 37px;
+position: absolute;
+right: 0;
+top: 7px;
+z-index: 2;
+background: #DFDFDF;
+}
+#index .box > div > div:last-child:after {
+width: 0px;
+
+}
+#index .content {
+	width: 100%;
+	display: inline-block;
+}
+#index .content .noperson{
+	text-align: center;
+	color: #FFF;
+	font-size: 18px;
+}
+#index .col {
+	width: 50%;
+	float: left;
+}
+
+#index .person {
+    position: relative;
+    border-radius: 5px;
+    margin: 10px;
+    background: #DA3A3C;
+    padding: 5px;
+}
+#index .col:nth-child(1) .person{
+	margin: 10px 5px 10px 10px;
+}
+#index .col:nth-child(2) .person{
+	margin: 10px 10px 10px 5px;
+}
+.person .person-head {
+    position: relative;
+    /* border: 5px solid #fff; */
+    border-radius: 5px;
+    border: 5px solid #fff;
+}
+
+.person .person-head img {
+    width: 100%;
+    padding: 0;
+    vertical-align: bottom;
+}
+
+
+.shadow-tip {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	background: rgba(0,0,0,0.4);
+	position: absolute;
+	color: #fff;
+	left: 0;
+	bottom: 0;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.person-no {
+	color: #fff;
+	position: relative;
+	margin: 0px 10px;
+	line-height: 20px;
+}
+
+.person-name {
+	color: #fff;
+	float: right;
+	margin-right: 7px;
+}
+
+.person .person-foot {
+	position: relative;
+}
+
+.person-foot  span {
+	line-height: 40px;
+	color: #fff;
+}
+
+.person-foot .submit {
+    width: 50px;
+    border: 0;
+    text-align: center;
+    font-size: 13px;
+    float: right;
+    margin: 10px 0;
+}
+.person-foot .submit.champion {
+	width: 70px;
+	margin: 6px 0;
+}
+#index .prev-next {
+	width: 100%;
+	text-align: center;
+	padding: 5% 0;
+}
+
+#index .prev-next .prev,
+#index .prev-next .next {
+	width: 30%;
+}
+
+.rule-fixed {
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+	width: 100%;
+	position: fixed;
+	top: 0;
+	max-width: 640px;
+	z-index: 79;
+}
+
+.rank,.regist{
+	text-align: center;
+	margin: 0 5%;
+}
+.rank .rank-title{
+	font-size: 26px;
+	color: #fff;
+	font-weight: 700;
+	border-right: 5px solid #fff;
+	padding: 0 20px;
+	text-align: center;
+	display: inline-block;
+	margin: 15px 0;
+	border-left: 5px solid #fff;
+}
+.regist .regist-title{
+	font-size: 20px;
+	color: #fff;
+	font-weight: 700;
+	padding: 0 20px;
+	text-align: center;
+	margin: 15px 0;
+}
+.vote .rank-title{
+	font-size: 26px;
+	color: #fff;
+	font-weight: 700;
+	text-align: center;
+	margin: 15px 0;
+}
+.vote .rank-title span{
+	font-size: 26px;
+	color: #fff;
+	font-weight: 700;
+	border-right: 5px solid #fff;
+	padding: 0 20px;
+	text-align: center;
+	border-left: 5px solid #fff;
+}
+.rank table {
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	border-collapse: collapse;
+}
+
+table thead {
+	background: #fff;
+	color: #F5100C;
+}
+
+table tr {
+	height: 49px;
+	border-bottom: 1px dashed #fff
+}
+
+table tr:nth-child(1) td:nth-child(1) {
+	background: url(../images/r1.png) no-repeat;
+	background-size: 40px;
+	background-position: 6px;
+	width: 50px;
+	height: 37px;
+}
+
+table tr:nth-child(2) td:nth-child(1) {
+	background: url(../images/r2.png) no-repeat;
+	background-size: 40px;
+	background-position: 6px;
+}
+
+table tr:nth-child(3) td:nth-child(1) {
+	background: url(../images/r3.png) no-repeat;
+	background-size: 40px;
+	background-position: 6px;
+}
+
+.rank .showmore {
+	color: #fff;
+	text-align: center;
+	padding: 20px 0;
+}
+
+#index .regist .search-bar button {
+	width: 100%;
+	border-radius: 5px;
+	background: #F5100C;
+	height: 40px;
+	border: 0;
+	font-size: 17px;
+	color: #fff;
+}
+
+#index .regist .search-bar p {
+	color: #fff;
+	text-align: left;
+}
+
+.vote img,.rank img {
+	width: 30%;
+	margin: 10px 35%;
+}
+
+.vote .form {
+	margin: 0 10px;
+	color: #fff
+}
+
+.vote .form input {
+	border: 0;
+	border-radius: 5px;
+	height: 31px;
+	width: 70%;
+	margin-left: 10px;
+}
+
+.vote .upload-pic label {
+	float: left;
+	position: absolute;
+	padding-top: 21px;
+}
+
+.vote #message {
+	border: 0
+}
+
+.vote .upload-pic .picture {
+	background: url(../images/add.png) no-repeat;
+	height: 64px;
+	width: 64px;
+	background-size: 60px;
+	margin-left: 65px;
+	margin-top: 13px;
+}
+
+.vote .upload-pic #input1 {
+	background: #9AC71C;
+	color: #fff;
+	width: 41%;
+	height: 60px;
+	position: absolute;
+	margin-top: 11px;
+	margin-left: 0;
+}
+
+.vote .form textarea {
+	vertical-align: middle;
+	margin: 0 0 0 10px;
+	border-radius: 5px;
+	width: 70%;
+}
+
+.vote .subdiv {
+	text-align: center;
+	padding: 20px 0;
+}
+
+.vote .subdiv .submit {
+	width: 34%;
+	height: 36px;
+	border-radius: 5px;
+	background: #F5100C;
+	position: relative;
+	border: 0;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+}
+
+.information .person .person-head .close {
+	width: 30px;
+	position: absolute;
+	right: -14px;
+	top: -14px;
+}
+
+.information .person-foot p {
+	line-height: 24px;
+	margin: 0;
+	font-size: 16px;
+	color: #F5100C;
+}
+
+.information .person-foot {
+	margin: 10px 0
+}
+
+.information button {
+	width: 100%;
+	height: 36px;
+	border-radius: 5px;
+	position: relative;
+	border: 0;
+	text-align: center;
+	font-size: 16px;
+	margin: 8px 0;
+}
+
+.three-btn {
+	position: relative;
+	padding: 10px;
+}
+
+.three-btn #tovote {
+	color: #fff;
+	background: #F5100C;
+}
+
+.three-btn #toupdate {
+	color: #F5100C;
+	background: #fff;
+}
+
+.three-btn #toback {
+	color: #fff;
+	background: rgba(0,0,0,0.2);
+}
+
+#comment-photo {
+	position: absolute;
+	top: 15px;
+}
+
+.upload-pic {
+	position: relative;
+}
+
+.upload-div #result {
+	width: 85px;
+	height: 85px;
+	margin-left: 68px;
+	margin-top: 0;
+}
+
+.upload-div .close {
+	width: 30px;
+	position: absolute;
+	right: -14px;
+	top: -12px;
+	margin: 0
+}
+
+#btn_upload {
+	width: 100px;
+	margin: 10px 0 10px 60px;
+}
+/*验证码*/
+.code-fixed {
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+	width: 100%;
+	position: fixed;
+	top: 0;
+	max-width: 640px;
+	z-index: 79;
+}
+.code-fixed .code{
+	text-align: center;
+	margin: 144px 20px;
+	background: #FFFFFF;
+	height: 108px;
+	border-radius: 5px;
+	padding: 30px 0 0;
+	position: relative;
+} 
+.code-fixed .code input{
+	height: 30px;
+	width: 150px;
+	border: 1px solid #EAEAEA;
+	padding: 0;
+	border-radius: 5px;
+	background: #efefef;
+}
+.code-fixed .code img{
+	height: 30px;
+	vertical-align: bottom;
+}
+.code-fixed .code .close{
+	position: absolute;
+	right: -14px;
+	top: -13px;
+}
+.code-fixed .code_submit{
+	width: 100px;
+	height: 36px;
+	border-radius: 5px;
+	background: #F5100C;
+	position: relative;
+	border: 0;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+	padding: 1px;
+	vertical-align: top;
+	margin-top: 13px;
+}
+.container{
+	    margin: 10px;
+}
+.container .titlework{
+    width: 40%;
+    margin: 0 auto;
+    background: #EB5A49;
+    border-radius: 10px 10px 0 0;
+    padding: 0 10%;
+}
+.content-bj{
+	    background: url(../images/bj.png);
+    background-size: contain;
+    height: 100%;    
+    width: 90%;
+    padding: 5%;
+        border-radius: 5px;
+}

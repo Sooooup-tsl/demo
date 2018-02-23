@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>拼团成团</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta content="telephone=no" name="format-detection">
+        <link rel="stylesheet" type="text/css" href="css/common.css">
+        <link rel="stylesheet" type="text/css" href="css/part.css">
+    </head>
+    <body class="layout">
+        <img src="images/purtopbar.png" style="width:100%;vertical-align: bottom;position: fixed;z-index: 1;" id="topimg">
+        <div class="item-left">
+            <ul>
+                <li class="obj">颜色</li>
+                <li>面料</li>
+                <li>遮光</li>
+                <li>测量</li>
+                <li>安装</li>
+            </ul>
+        </div>
+        <div class="item-right">
+            <div class="richtext page1">
+                <img src="images/1.png">
+            </div>
+            <div class="richtext page2">
+                <img src="images/2.png">
+            </div>
+            <div class="richtext page3">
+                <img src="images/3.png">
+            </div>
+            <div class="richtext page4">
+                <img src="images/4.png">
+            </div>
+            <div class="richtext page5">
+                <img src="images/5.png">
+            </div>
+        </div>
+    </body>
+    <script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+
+    <script charset="utf-8" type="text/javascript">
+    
+$(window).load(function() { 
+    var img_h=parseInt($("#topimg").css("height"));
+    var win_h=$(window).height();
+    $(".item-left,.item-right").css("top",img_h)
+    //tab切换
+    var li = $('.item-left ul li');
+    var div = $('.item-right div');
+    $("ul li").click(function(e) {
+        li.removeClass("obj")
+        $(this).addClass("obj");
+        var tab =$(this).index();
+        $("body").animate({
+            scrollTop:div.eq(tab).offset().top-img_h
+        }, 800);
+    })
+   //if(div.scrollTop)
+     $(window).scroll(function() {
+        var li = $('.item-left ul li');
+        var t = $(this).scrollTop();
+        var page1 = $('.page1').offset().top
+        var page2 = $('.page2').offset().top
+        var page3 = $('.page3').offset().top
+        var page4 = $('.page4').offset().top
+        var page5 = $('.page5').offset().top
+        if(t-page1>=-img_h){
+            li.removeClass("obj")
+            li.eq(0).addClass("obj");
+        }
+        if(t-page2>=-img_h){
+            li.removeClass("obj")
+            li.eq(1).addClass("obj");
+        }
+        if(t-page3>=-img_h){
+            li.removeClass("obj")
+            li.eq(2).addClass("obj");
+        }
+        if(t-page4>=-img_h){
+            li.removeClass("obj")
+            li.eq(3).addClass("obj");
+        }
+        if(t-page5>=-img_h){
+            li.removeClass("obj")
+            li.eq(4).addClass("obj");
+        }
+    })
+})
+    </script> 
+</html>

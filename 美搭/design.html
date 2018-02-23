@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>选购与攻略</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/part.css">
+    <link rel="stylesheet" type="text/css" href="css/ui-box.css">
+</head>
+<body class="layout bg-white design">
+    <div class="mt-15" style="padding:15px;">
+        <img src="images/new30/designtop.png" style="width: 67%;">
+        <div class="mt-15 fs15">
+            <div class=" ub">
+                <div class="ub ub-f1 w0"><label>姓名</label><input type="text" id="name"></div>
+                <div class="ub ub-f1 w0"><label>电话</label><input type="text" maxlength="11" id="tel"></div>
+            </div>
+            <div class="ub mt-30">
+                <p class="superiority ub-f1 w0"><label>优势：<br><span class="fs12 c2" style="margin-left: -12px;">（可多选）</span></label></p>
+                <div class="deschoose  ub-f5 w0 ub-pj">
+                    <div class="ub">
+                        <div class="ub ub-f1 w0"><span>窗帘</span></div>
+                        <div class="ub ub-f1 w0"><span>床品</span></div>
+                        <div class="ub ub-f1 w0"><span>整体搭配</span></div>
+                    </div>
+                    <div class="ub">
+                        <div class="ub ub-f1 w0"><span>沙发布艺</span></div>
+                        <div class="ub ub-f1 w0"><span>地毯</span></div>
+                        <div class="ub ub-f1 w0"><span>桌布</span></div>
+                    </div>
+                    <div class="ub">
+                        <div class="ub ub-f1 w0"><span>靠垫</span></div>
+                        <div class="ub ub-f1 w0"><span>沙发垫</span></div>
+                        <div class="ub ub-f1 w0"><span class="zhan"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="images/new30/design.png" class="bgimg">
+    <div class="submit">
+        <button class="btn">提交<i class="smtri"></i></button>
+    </div>
+</body>
+<script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/noclickdelay.js"></script>
+<script type="text/javascript">
+$(function() {
+    var n = 0;
+    $(".deschoose span").click(function(){
+        $(this).toggleClass("obj")
+    })
+    //传值 
+    var temp_txt = "";
+    $(".btn").click(function(){
+        var name=$("#name").val();
+        var tel=$("#tel").val();
+        if (Util.isEmpty(name)) {
+            Util.info("请输入姓名");
+            return;
+        }
+        if (Util.isEmpty(tel)) {
+            Util.info("请输入手机号");
+            return;
+        }
+        if (!Util.isMobile(tel)) {
+                Util.info("手机号格式不正确");
+                return;
+        }
+        temp_txt = "";
+        for(var i = 0; i < $(".deschoose span").length; i++){
+            if($(".deschoose span").eq(i).hasClass("obj")){
+                temp_txt = temp_txt + $(".deschoose span").eq(i).text() + ",";
+            }
+        }
+        temp_txt = temp_txt.substring(0,temp_txt.length -1);
+        if (temp_txt=='') {
+            Util.info("请至少选择一样您的优势");
+            return;
+        }
+        console.log(name,tel,temp_txt);
+    })
+})
+</script>
+</html>

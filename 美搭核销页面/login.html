@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>美搭美家</title>
+    <meta charset="utf-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+</head>
+<body>
+	<div class="bj">
+		<div>
+	    	<img src="images/topimg.png">
+	    </div>
+		<div class="form-login">
+			<div class="mt1 inputbg">
+				<label>账户名</label><input type="text" id="name">
+			</div>
+			<div class="mt1 inputbg">
+				<label>密&nbsp;&nbsp;&nbsp;码</label><input type="text" id="pwd">
+			</div>
+		</div>
+		<div class="submit mt2">
+			<button>登录</button>
+		</div>
+	</div>
+
+</body>
+<script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript">
+	$(".submit").click(function(){
+		var p1=$("#name").val();
+		var p2=$("#pwd").val();
+		if(Util.isEmpty(p1)){
+			Util.info("请输入账户");
+			return;
+		}
+		if(Util.isEmpty(p2)){
+			Util.info("请输入密码");
+			return;
+		}
+		location.href="loginsuccess.html"
+	})
+</script>
+</html>

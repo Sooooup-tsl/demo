@@ -1,0 +1,28 @@
+.item-left{
+width: 25%;
+text-align: center;
+position: fixed;
+z-index: 1;
+top: 165px;
+}
+.item-left ul{list-style-type: none;
+}
+.item-left ul li{
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #DEDEDE;
+    background: #F6F6F6;
+    font-size: 16px
+}
+.item-left ul li.obj{
+    background: #fff;
+    color: #E60A44
+}
+.item-right{
+width: 75%;
+top: 165px;
+position: absolute;
+left: 25%;
+}
+.item-right img{width: 100%}
+.richtext{ background: #fff;}

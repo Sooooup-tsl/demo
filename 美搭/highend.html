@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>  
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	    <meta content="telephone=no" name="format-detection">
+	    <link rel="stylesheet" href="css/common.css">
+	    <link rel="stylesheet" href="css/highend.css">
+	</head>
+	<body class="layout highend">
+		<div  class="slide" id="slide">
+            <ul>
+                <li>
+                    <img src="images/highend/p1.png" class="slideimg">
+                    <div class="container bg-white">
+                        <div class="dot">
+                            <i class="cur2">1</i><i class="fzb">/</i><i class="total2" >20</i>
+                        </div>
+                        <div class="content">
+                        	<h3 class="fs16 c4">原创香奈儿范儿－－雪尼尔透气健康环保</h3>
+                        	<p class="pt-15 pb-30 c4 opac07">细腻柔和的优质高档雪尼尔面料，绒面柔和，手感舒适，健康环保，清爽垂顺兼备，不缩水，易打礼，吸湿透气，室内搭配地中海家具增添美感。</p>
+                        </div>
+                    </div>
+                </li>
+               <!--  <li>
+                   <img src="images/highend/p1.png" class="slideimg">
+                   <div class="container bg-white">
+                       <div class="dot">
+                           <i class="cur2">1</i><i class="fzb">/</i><i class="total2" >20</i>
+                       </div>
+                       <div class="content">
+                           <h3 class="fs16 c4">原创香奈儿范儿－－雪尼尔透气健康环保</h3>
+                           <p class="pt-15 pb-30 c4 opac07">细腻柔和的优质高档雪尼尔面料，绒面柔和，手感舒适，健康环保，清爽垂顺兼备，不缩水，易打礼，吸湿透气，室内搭配地中海家具增添美感。细腻柔和的优质高档雪尼尔面料，绒面柔和，手感舒适，健康环保，清爽垂顺兼备，不缩水，易打礼，吸湿透气，室内搭配地中海家具增添美感。细腻柔和的优质高档雪尼尔面料，绒面柔和，手感舒适，健康环保，清爽垂顺兼备，不缩水，易打礼，吸湿透气，室内搭配地中海家具增添美感。</p>
+                       </div>
+                   </div>
+               </li>
+               <li>
+                   <img src="images/highend/p1.png" class="slideimg">
+                   <div class="container bg-white">
+                       <div class="dot">
+                           <i class="cur2">1</i><i class="fzb">/</i><i class="total2" >20</i>
+                       </div>
+                       <div class="content">
+                           <h3 class="fs16 c4">原创香奈儿范儿－－雪尼尔透气健康环保</h3>
+                           <p class="pt-15 pb-30 c4 opac07">细腻柔和的优质高档雪尼尔面料，绒面柔和，手感舒适，健康环保，清爽垂顺兼备，不缩水，易打礼，吸湿透气，室内搭配地中海家具增添美感。细腻柔和的优质高档雪尼尔面料，绒面柔和，手感舒适，健康环保，清爽垂顺兼备，不缩水，易打礼，吸湿透气，室内搭配地中海家具增添美感。细腻柔和的优质高档雪尼尔面料，绒面柔和，手感舒适，健康环保，清爽垂顺兼备，不缩水，易打礼，吸湿透气，室内搭配地中海家具增添美感。细腻柔和的优质高档雪尼尔面料，绒面柔和，手感舒适，健康环保，清爽垂顺兼备，不缩水，易打礼，吸湿透气，室内搭配地中海家具增添美感。细腻柔和的优质高档雪尼尔面料，绒面柔和，手感舒适，健康环保，清爽垂顺兼备，不缩水，易打礼，吸湿透气，室内搭配地中海家具增添美感。细腻柔和的优质高档雪尼尔面料，绒面柔和，手感舒适，健康环保，清爽垂顺兼备，不缩水，易打礼，吸湿透气，室内搭配地中海家具增添美感。</p>
+                       </div>
+                   </div>
+               </li> -->
+            </ul>
+        </div>
+        <div class="fix-bottom">
+            <span class="chat"><img src="images/highend/kefu.png"></span>
+            <button class="btn">我要定制<i class="smtri"></i></button>
+        </div>
+	</body>
+    <script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/swipe.min.js"></script>
+	<script charset="utf-8" type="text/javascript">
+		$(function(){
+	        $('#slide').swipeSlide({
+	            autoSwipe:false,
+	            speed : 3000,
+	            transitionType : 'cubic-bezier(0.22, 0.69, 0.72, 0.88)',
+	            callback : function(i){
+	                $(".cur2").text(i+1);
+	                var j=$('#slide ul').children().length;
+	                $(".total2").text(j);
+	                var window_h=$(window).height();//屏幕高度
+	                var tol_h;//滑动高度
+                	var img_h=$(".slideimg:eq("+(i)+")").height();//图片高度
+                	var con_h=$(".content:eq("+(i)+")").height();//文本高度
+                	tol_h=img_h+con_h+56;
+                	if(window_h>tol_h){
+                		tol_h=window_h;
+                	}
+                	$(".slide").css("height",tol_h+"px");
+                    
+	            }
+	            
+	        });
+
+		});
+	</script>
+</html>

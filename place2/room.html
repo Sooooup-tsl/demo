@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>美搭美家</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" href="css/ui-base.css">
+<link rel="stylesheet" href="css/ui-box.css">
+<link rel="stylesheet" href="css/ui-color.css">
+<style type="text/css">
+	.hide{display: none !important;}
+	:focus{outline: 10px solid red};
+</style>
+
+<!--移动端版本兼容 -->
+<script type="text/javascript">
+    var phoneW = parseInt(window.screen.width), phoneScale = phoneW / 640, ua = navigator.userAgent;
+    if (/Android (\d+\.\d+)/.test(ua)) {
+        var version = parseFloat(RegExp.$1);
+        if (version > 2.3) {
+            document.write('<meta name="viewport" content="width=640, initial-scale=' + phoneScale + ', minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+        } else { document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">'); }
+    } else { document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">'); }
+</script>
+<!--移动端版本兼容 end -->
+</head>
+<body class="layout bj">
+	<div class="before">
+		<div class="house">
+			<!-- 房型大图展示 -->
+			<div class="room_big">
+				<div class="homeicon ub ub-pj">
+					<div class="ub">
+						<img src="images/icon1.png">
+					</div>
+				</div>
+				<div id="roombefore" style="background: url('images/room/1.png') no-repeat;background-size: cover;background-position: 38%;height: 74%;width: 100%;">
+				</div>
+				<div class="startDa">
+					<p class="btn" onClick="start()">开始搭配<i></i></p>
+				</div>
+			</div>
+		</div>
+		<div class="footertype">
+			<div class="ub ub-pc word">
+				<p>←左右滑动切换图片→</p>
+			</div>
+			<div class="scroll">
+				<!-- 房型选择 -->
+				<div class="roomtype" id="smallroom">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="after hide">
+		<div class="house">
+			<!-- 房型大图展示 -->
+			<div class="room_big">
+				<div class="homeicon ub ub-pj" style="position: fixed;width:94%;max-width:601px">
+					<div class="ub" id="icon1">
+						<img src="images/icon1.png">
+					</div>
+					<div class="ub" id="icon2">
+						<img src="images/icon2.png">
+					</div>
+					<div class="ub" id="icon3">
+						<img src="images/icon3.png">
+					</div>
+					<div class="ub" id="icon4">
+						<img src="images/icon4.png">
+					</div>
+				</div>
+				<div class="scrollBig" id="furniture">
+					<!-- <img src="images/room/1.png" id="roomafter" class="map" usemap="#diyRoom" > -->
+                    <div class="allpic swipe"> 
+                        <div class="sofadiv"><img src="images/sofa/1.png" id="img-sofa" furnitureid="1"><a furnitureid="1" id="sofa-area1"></a></div><!-- 沙发 -->
+                        <div class="roofdiv"><img src="images/roof/d1.png" id="img-roof" furnitureid="2"><a furnitureid="2"></a></div><!-- 屋顶 -->
+                        <div class="walldiv"><img src="images/wall/d1.png" id="img-wall"  furnitureid="3"><a furnitureid="3" id="wall-area1"></a><a furnitureid="3" id="wall-area2"></a></div><!-- 墙 -->
+                        <div class="floordiv"><img src="images/floor/d1.png" id="img-floor"  furnitureid="4"><a furnitureid="4"></a></div><!-- 地板 -->
+                        <div class="curtaindiv"><img src="images/curtain/d1.png" id="img-curtain"  furnitureid="6"><a furnitureid="6"></a></div>
+                    </div>
+                </div>
+			</div>
+		</div>
+		<div class="footertype">
+			<!-- 材质选择 -->
+			<div class="ub material scroll" id="material">
+			</div>
+            <!-- 素材选择 -->
+			<div class="model ub scroll" id="material-img">
+			</div>
+		</div>
+	</div>
+    <input type="hidden" id="roomid" value=""/>
+    <input type="hidden" id="furnitureid" value=""/>
+    <input type="hidden" id="materialid" value=""/>
+    <input type="hidden" id="typeid" value=""/>
+    <input type="hidden" id="lightid" value=""/>
+
+</body>
+<!-- <script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script> -->
+<script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/main.js"></script>
+<script src="js/util.js"></script>
+<script type="text/javascript">
+    var roomid;
+    var furid;
+    var mateid;
+    var typeid;
+    var lightid;
+    //before选择房型
+    $(document).on("click","#smallroom img",function(){
+		$("#smallroom img").removeClass("obj")
+		$(this).addClass("obj");
+        var url=$(this).attr("src");
+        var url=$(this).attr("src");
+		$("#roombefore").css({
+			'background':'url('+url+') no-repeat',
+			'background-size': 'cover',
+			'background-position':'38%'
+		})
+		$("#roomafter").attr("src",url)
+	})
+    //开始搭配
+    function start(){
+    	$(".before").addClass("hide");
+    	$(".after").removeClass("hide");
+        //获取房型id
+        var roomid=$("#smallroom img.obj").attr("roomid");
+        $("#roomid").val(roomid);//房型id
+        lightid=0;//默认白天
+        var html='';
+        $.ajax({
+            type: "get",
+            dataType:'json',
+            url: "furid6",
+            success  : function(data) { 
+                for(i=0;i<data.length;i++){
+                    if(i==0){
+                        html+='<div class="ub type-style obj" materialid="'+data[i].id+'">'+data[i].material+'</div>';
+                    }
+                    else{
+                        html+='<div class="ub type-style" materialid="'+data[i].id+'">'+data[i].material+'</div>';
+                    }
+                    
+                }
+                $("#material").html(html);
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+               }
+        });
+        $.ajax({
+            type: "get",
+            dataType:'json',
+            url: "furid6mateid1",
+            success  : function(data) { 
+                var html2='';
+                for(i=0;i<data.length;i++){
+                    html2+='<div class="material-smallimg">';
+                    html2+='<div style="background: url('+data[i].img+');background-size: 150% 200%;background-position:12% 5%;" class="matertal-bg-img" sofaid="'+data[i].id+'"></div>';
+                    html2+='</div>';
+                }
+                $("#material-img").html(html2);
+            },
+            error: function(data) {
+            }
+        });
+    }
+
+    //$('#material div').click(function(){
+    $("#material").on('click','div',function(){
+        furid=$("#furnitureid").val();
+        if(furid==""){
+            Util.info2("请选择家具");
+            return
+        }
+
+        $("#material div").removeClass("obj")
+        $(this).addClass("obj");
+        var mateid=$(this).attr("materialid");
+        $("#materialid").val(mateid);
+        $.ajax({
+            type: "get",
+            dataType:'json',
+            //url: "sofalist?furid="+furid+"&mateid="+mateid,
+            url: "furid"+furid+"mateid"+mateid+"light="+light,
+            success  : function(data) { 
+                var html='';
+                for(i=0;i<data.length;i++){
+                    html+='<div class="material-smallimg">';
+                    if(furid==1){
+                        html+='<div style="background: url('+data[i].img+');background-color: '+data[i].color+';" class="matertal-bg-img" sofaid="'+data[i].id+'"></div>';
+                    } 
+                    else if(furid==2){
+                        html+='<div style="background: url('+data[i].img+');background-size: 300% 400%;background-position:71% 2%" class="matertal-bg-img" sofaid="'+data[i].id+'"></div>';
+                    }
+                    else if(furid==3){
+                        html+='<div style="background: url('+data[i].img+');background-size: 100%;background-position: 75px -90px;" class="matertal-bg-img" sofaid="'+data[i].id+'"></div>';
+                    }
+                    else if(furid==4){
+                        html+='<div style="background: url('+data[i].img+');background-size: 400% 400%;background-position: -66% -38%;" class="matertal-bg-img" sofaid="'+data[i].id+'"></div>';
+                    }
+                    else{     
+                        html+='<div style="background: url('+data[i].img+');background-size: 150% 200%;background-position: 12% 5%;" class="matertal-bg-img" sofaid="'+data[i].id+'"></div>';
+                    } 
+                    html+='</div>';
+                }
+                $("#material-img").html(html);
+            },
+            error: function(data) {
+            }
+        });
+    })
+    $("#icon1").click(function(){
+        Util.showmsg("确定离开重新选择么，建议先收藏哟~~",function a(){
+           location.href="index.html" 
+       },"","confirm"); 
+    })
+
+    $("#icon2").click(function(){
+        //Util.info2("还木有画(●ˇ∀ˇ●)");   
+        Util.info2("开启夜间模式");
+        lightid=1;
+    })
+    $("#icon3").click(function(){
+        roomid=$("#roomid").val();//房型id
+        furid=$("#furnitureid").val();//家具id
+        mateid=$("#materialid").val();//材质id
+        typeid=$("#typeid").val();//素材id
+        var cood="roomid="+roomid+"&furid="+furid+"&mateid="+mateid+"&typeid="+typeid;
+        //Util.info2("cood")
+        Util.info2("收藏成功")
+    })
+
+    $("#icon4").click(function(){
+        Util.info2("分享")
+    })
+     </script>
+</script>
+</html>

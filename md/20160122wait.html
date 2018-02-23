@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>等待成团</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta content="telephone=no" name="format-detection">
+        <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.5.6/css/sm.min.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/order.css">
+		<link rel="stylesheet" href="css/ui-bar.css">
+	</head>
+	<body class="layout">
+		<div class="page">
+		    <header class="bar-nav">
+				<!-- 状态一一对应 -->
+		        <div class="header">
+		            <div class="status2 ">等待成团</div>
+		            <!-- 新加的功能 start-->
+					<div class="newtips">
+						<div class="timesbar">据结束剩余：<span>30</span>天<span>30</span><span>30</span><span>30</span></div>
+					</div>
+					<!-- 新加的功能 end-->
+		        </div>
+		        <!-- 个人订单 Start-->
+		    </header>
+		    <div class="content">
+		        <div class="status">
+		            <!-- 等待成团 -->
+		            <div class="">您已参团成功，请等待拼团成功，若12月31日，未达30人，此团将取消。</div>
+		        </div>
+
+				<!-- <div class="mt-15 timebar">
+					<div>
+						<div class="inline-block fs13">距结束剩余：<span>30</span>:<span>30</span>:<span>30</span></div>
+						<div class="fright icon-rule">团购规则</div>
+					</div>
+					<div class="prog">
+						<div class="prog_all"></div>
+						<div class="prog_sub">
+							<span class="prog_active"></span>
+							<span class="prog_allnum">30人</span>
+							<span class="prog_num">21人</span>
+						</div>
+					</div>
+				</div> -->
+		        <!-- 已选订单详情 Start-->
+				<div class="busi-desc bg-white mt-15">
+	                <img src="images/business/g1.png" class="img-logo">
+	                <div class="bd">
+	                    <h4>韩式进口浮雕绣花窗纱定制窗帘纱定制窗帘</h4>
+	                    <p>尺寸：<label id="size">宽4米 高2.6米一副</label> 颜色：<label id="color">米白色</label></p>
+	                    <div class="tips fs12 c3">
+	                        订金：<span class="c2 fs18">¥399</span>
+	                        <span class="fright c1">×1</span>
+	                    </div>
+	                </div>
+				</div>
+		    </div>
+            <div class="fixed_img">
+            	<img src="images/business/bolster.jpg">
+            </div>
+			<div class="pay-fixed hide" >
+				<img src="images/pay.png" style="width:100%"/>
+			</div>
+			<!-- 订金规则 Start-->
+			<div class="rules hide">
+				<div class="rule">
+					<h1>活动规则</h1>
+					<div class="rule-content">
+						<p>的是覅后我Iu返回回复我I恢复 </p>
+						<p>的是覅后我Iu返回回复我I恢复的是覅后我Iu返回回复我I恢复的是覅后我Iu返回回复我I恢复 </p>
+						<p>的是覅后我Iu返回回复我I恢复 </p>
+						<p>的是覅后我Iu返回回复我I恢复的是覅后我Iu返回回复我I恢复的是覅后我Iu返回回复我I恢复 </p>
+						<p>的是覅后我Iu返回回复我I恢复 </p>
+						<p>的是覅后我Iu返回回复我I恢复的是覅后我Iu返回回复我I恢复的是覅后我Iu返回回复我I恢复 </p>
+						<p>的是覅后我Iu返回回复我I恢复的是覅后我Iu返回回复我I恢复的是覅后我Iu返回回复我I恢复 </p>
+						<p>的是覅后我Iu返回回复我I恢复的是覅后我Iu返回回复我I恢复的是覅后我Iu返回回复我I恢复 </p>
+						<p>的是覅后我Iu返回回复我I恢复的是覅后我Iu返回回复我I恢复的是覅后我Iu返回回复我I恢复 </p>
+					</div>
+					<button onclick="$(this).parents('.rules').hide()">我知道了</button>
+				</div>
+			</div>
+			<!-- 订金规则 End-->
+		</div>
+	</body>
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+	<script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.5.6/js/sm.min.js' charset='utf-8'></script>
+    <script charset="utf-8" type="text/javascript">
+    	$(".fixed_img").click(function(){
+    		$(".pay-fixed").removeClass("hide");
+    	})
+    	$(".pay-fixed").click(function(){
+    		$(".pay-fixed").addClass("hide");
+
+    	})
+		//订金规则显示
+		$(".icon-rule").click(function(){
+			$(".rules").show();
+		})
+	</script> 
+</html>

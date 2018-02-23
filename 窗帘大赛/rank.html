@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title>排行榜</title>  
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	    <meta content="telephone=no" name="format-detection">
+        <link rel="stylesheet" href="css/common.css" >
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/main.css">
+	</head>
+	<body class="layout">
+        <div id="index" >
+            <div class="head">
+                <img src="images/top.png"/>
+                <div class="apply">
+                    <a href="join.html"><img src="images/join.png"/></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="ub ub-ac ub-pj">
+                    <div class="ub ub-pc ub-f1 w0 ta-center">浏览人数<br/>80</div>
+                    <div class="ub ub-pc ub-f1 w0 ta-center">参与人次<br/>2563</div>
+                    <div class="ub ub-pc ub-f1 w0 ta-center">投票人数<br/>10000</div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="titlework">
+                    <img src="images/icon-rank.png">
+                </div>
+                <div class="content-bj">
+                    <div class="rank">
+                        <table  cellspacing="0" border-collapse: collapse>
+                            <thead>
+                                <th>名次</th>
+                                <th>编号</th>
+                                <th>昵称</th>
+                                <th>票数</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>010</td>
+                                    <td>宝宝</td>
+                                    <td>84</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="showmore"> 点击查看更多</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 弧形条 -->
+        <div class="commonbar">
+            <img src="images/commonbar.png">
+        </div>
+        <!-- 底部规则 -->
+        <div id="common">
+            <div class="rule">
+                <div class="rule-title">
+                    <img src="images/icon-rule.png">
+                </div>
+                <div class="rule-content">
+                    <p>1、上传你家的窗帘，邀请好友吐槽，票选最丑的窗帘，美搭美家免费给您换一个。</p>
+                    <p>2、好友有“挺好哒”和“真丑呀”两个选择，票数排行有“真丑呀”减去“挺好哒”所得。</p>
+                    <p>3、每人投票后有一次修改的机会。</p>
+                    <p>4、记得拉拢好友，不要让他成为你的绊脚石哦！</p>
+                    <p>5、必须上传自家窗帘照片，如发现为网上图片，则取消资格；</p>
+                    <p>最终解释权归美搭美家所有。</p>
+                </div>
+            </div>
+        </div>
+        <!-- 底部按钮 -->
+        <div class="footer-bar">
+            <div class="ub ub-pj ">
+                <div class="ub ub-f1 w0 ub-ac ub-pc"><a href="index.html"><img src="images/1.png" class="op50"/></a></div>
+                <div class="ub ub-f1 w0 ub-ac ub-pc"><a href="rank.html"><img src="images/2.png"/></a></div>
+                <div class="ub ub-f1 w0 ub-ac ub-pc"><img src="images/3.png" class="rule op50"/></div>
+                <div class="ub ub-f1 w0 ub-ac ub-pc"><a href="join.html"><img src="images/4.png" class="op50"/></a></div>
+            </div>
+        </div>
+
+        <!-- 浮层弹框显示 End-->
+        <div class="rule-fixed hide">
+            <img src="images/share.png" style="width:100%" onclick="$(this).parent().hide()"/>
+        </div>
+	</body>
+    <script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+	<script charset="utf-8" type="text/javascript">
+		$(function(){
+            //获奖攻略
+            $(".rule").click(function(){
+                $(".rule-fixed").show();
+            });
+            // 显示更多
+            $(document).on('click','.showmore',function(){
+                $.ajax({
+                    type: "get",
+                    dataType:'json',
+                    url: "rank",
+                    success  : function(data) { 
+                        if(!data){
+                            return;
+                        }
+                        for(i=0;i<data.length;i++){
+                            $("tbody").append("<tr><td>"+(i+1)+"</td><td>"+data[i].number+"</td><td>"+data[i].username+"</td><td>"+data[i].score+"</td></tr>");
+                        }
+                    },
+                    error: function(XMLHttpRequest, textStatus, errorThrown) {
+                       }
+                });
+            })       	
+		});
+
+	</script>
+</html>

@@ -1,0 +1,115 @@
+.slide {
+    position: relative;
+    overflow: hidden;
+    content: '';
+    display: block;
+    width: 100%;
+    /*padding-top: 200%;*/
+}
+
+/*.slide:after {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 200%;
+}*/
+
+.slide ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide li {
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide div {
+    width: 30%;
+    line-height: 1.5em;
+}
+
+.slide ul li img,.swiper-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.slide li:first-child {
+    z-index: 1;
+}
+
+.slide .dot {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    left: 0;
+    background: #282828;
+    color: #fff;
+    width: 15%;
+    text-align: center;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+}
+
+.slideimg {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    padding: 20px 0;
+}
+
+.highend .content {
+    width: 79%;
+    display: inline-block;
+    float: left;
+    padding: 0 3%;
+}
+.fix-bottom{
+    position: fixed;
+    width: 100%;
+    bottom: 20px;
+    text-align: center;
+    max-width: 640px;
+    z-index: 100;
+}
+.fix-bottom span.chat{
+    width: 50px;
+    float: left;
+    background: #E9E9E9;
+    border-radius: 0 20px 20px 0;
+}
+.fix-bottom span.chat img{
+    width: 37px;
+    float: right;
+}
+.fix-bottom .btn{
+    border: 1px solid #9A9A9A;
+    width: 120px;
+    height: 36px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    font-size: 16px;
+    color: #282828;
+    margin-left: -50px;
+}
+/*.fix-bottom .smtri {
+    border-left: 5px solid #282828;
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+    position: absolute;
+    margin-top: 4px;
+    margin-left: 5px;
+}
+*/

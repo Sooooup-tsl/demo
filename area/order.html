@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>拼团成功</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta content="telephone=no" name="format-detection">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/order.css">
+		<link rel="stylesheet" type="text/css" href="css/newindex.css">
+		<link rel="stylesheet" type="text/css" href="css/ui-box.css">
+		<link rel="stylesheet" type="text/css" href="css/ui-bar.css">
+		<style type="text/css">
+		.list-block .item-media+.item-inner {margin-left: .2rem;}
+		.fourpart {
+			border-top: 1px solid #e4e4e4;
+			}
+		</style>
+	</head>
+	<body class="layout">
+		<div class="">
+		    <div class="bar-nav ta-center" style="position: fixed;width: 100%;top:0;z-index:100">
+		        <div class="header">
+		            转发邀请更多人购买，可获得更低的折扣哟！
+		        </div>
+		    </div>
+		    <div class="" style="padding-bottom:100px;margin-top: 46px;">
+		    	<div class="container bg-white">
+					 <div class="ub ub-ver ub-ac ub-pc lh24 group_area">
+						<div class="ubimg">
+							<img src="images/new30/a1.png">
+						</div>
+						<h2 class="ub"><b>棕榈湾</b></h2>
+						<p class="ub c1">工业园区</p>
+					</div>
+					<div class="ub ub-pj fourpart mt-15">
+						<div class="ub ub-ver ub-ac ub-pc lh24 ub-f1 w0">
+							<div class="ub ubimg">
+								<img src="images/new30/icon1.png">
+							</div>
+							<div class="ub fs13">已参团</div>
+							<div class="ub fs12">108人</div>
+						</div>
+						<div class="ub ub-ver ub-ac ub-pc lh24 ub-f1 w0">
+							<div class="ub ubimg">
+								<img src="images/new30/icon4.png">
+							</div>
+							<div class="ub fs13">最高优惠</div>
+							<div class="ub fs12">8折</div>
+						</div>
+						<div class="ub ub-ver ub-ac ub-pc lh24 ub-f1 w0">
+							<div class="ub ubimg">
+								<img src="images/new30/icon3.png">
+							</div>
+							<div class="ub fs13">预计结束时间</div>
+							<div class="ub fs12">2016-01-30</div>
+						</div>
+					</div>
+				</div>
+				<div class="mt-15">
+					<div class="friendimg ub ub-pj"> 
+						<div class="ub"><img src="images/sample1.png"><span>团长</span></div>
+						<div class="ub"><img src="images/sample1.png"><span>沙发</span></div>
+						<div class="ub"><img src="images/sample1.png"></div>
+						<div class="ub"><img src="images/sample1.png"></div>
+						<div class="ub"><img src="images/sample1.png"></div>
+						<div class="ub"><img src="images/sample1.png"><span class="unshow">31</span></div>
+					</div>
+				</div>
+		        <!-- 已选订单详情 Start-->
+				<div class="busi-desc bg-white mt-15">
+	                <img src="images/business/g1.png" class="img-logo">
+	                <div class="bd">
+	                    <h4>美式乡村风</h4>
+	                    <p>尺码：<label id="size">宽4米 高2.6米一副</label> 颜色：<label id="color">米白色</label></p>
+	                    <div class="tips fs12 c3">
+	                        <span class="c2 fs18">¥399</span>
+	                        <span class="fright c4 fs16">×1</span>
+	                    </div>
+	                </div>
+				</div>
+			</div>
+		</div>
+	</body>
+    <script charset="utf-8" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/util.js"></script>
+    <script charset="utf-8" type="text/javascript">
+    $(".list-block .li-address").click(function (){
+    	$(".li-address .icon").removeClass("icon-c2")
+    	$(this).find(".icon").toggleClass("icon-c2");
+    	var obj=$(".icon-c2").parents(".li-address").find(".item-title").text()
+    	alert(obj)
+    }) 
+	</script> 
+</html>
